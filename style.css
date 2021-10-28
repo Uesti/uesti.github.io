@@ -1,0 +1,42 @@
+body {
+    margin: 0 auto;
+    font-family: sans-serif;
+    background-color: aliceblue;
+}
+
+h1 {
+    font-size: 32pt;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.pokemon {
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    margin: 5px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+h2 {
+    text-transform: capitalize;
+}
+
+span {
+    display: block;
+}
+
+.pokemon:hover {
+    transform: translateY(-3px);
+    box-shadow: 3px 3px 3px black;
+}
+
+span::first-letter {
+    text-transform: uppercase;
+}
