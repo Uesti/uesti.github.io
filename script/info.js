@@ -24,5 +24,5 @@ Velocidade: ${pokemon.stats.velocidade}<br>
 `
 
     habilidades.textContent = `Habilidades: ${pokemon.habilidades.join(', ')}`
-    tipo.textContent = pokemon.tipo.join(' and ')
+    tipo.textContent = `Tipo: ${pokemon.tipo.join(' and ')}`
 }

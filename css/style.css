@@ -6,8 +6,18 @@ body {
 }
 
 h1 {
-    font-size: 32pt;
+    font-size: 34pt;
+}
+
+header {
     text-align: center;
+}
+
+input {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 200px;
+    height: 25px;
 }
 
 main {
@@ -18,7 +28,9 @@ main {
     width: 75%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: left;
+    margin: 20px;
+    margin-top: 0 ;
 }
 
 .pokemon {
@@ -26,7 +38,7 @@ main {
     text-align: center;
     height: 200px;
     width: 200px;
-    margin: 5px;
+    margin: 10px;
     border-radius: 10px;
     transition: 0.2s;
 }
@@ -57,6 +69,7 @@ span::first-letter {
     border-radius: 10px;
     padding: 10px;
     transition: 0.2s;
+    margin-top: 10px;
 }
 
 #info h2 {
