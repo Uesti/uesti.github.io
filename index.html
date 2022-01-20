@@ -2,15 +2,30 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="color.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/color.css">
     <title>Pokedex</title>
 </head>
 <body>
     <h1>Pokedex</h1>
-    <main id="main">
-
+    <main>
+        
+        <section id="pokemons"></section>
+        <section id="info">
+            <h2></h2>
+            <div id="sprite">
+                <img id="sprite_frente">
+                <img id="sprite_tras">
+            </div>
+            <div id="atributos">
+                <span id="status"> </span>
+                <span id="habilidades"></span>
+                <span id="tipo"></span>
+            </div>
+        </section>
     </main>
 </body>
-<script src="script.js"></script>
+
+<script src="./script/fetch.js"></script>
+<script src="./script/info.js"></script>
 </html>
