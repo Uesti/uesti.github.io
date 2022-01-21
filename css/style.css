@@ -43,7 +43,10 @@ main {
     transition: 0.2s;
 }
 
-h2 {
+p {
+    margin: 12px;
+    font-size: 17pt;
+    font-weight: 600;
     text-transform: capitalize;
 }
 
@@ -56,10 +59,6 @@ span {
     box-shadow: 3px 3px 3px black;
 }
 
-span::first-letter {
-    text-transform: uppercase;
-}
-
 #info {
     position: -webkit-sticky;
     position: sticky;
@@ -70,9 +69,11 @@ span::first-letter {
     padding: 10px;
     transition: 0.2s;
     margin-top: 10px;
+    margin-right: 10px;
 }
 
 #info h2 {
+    text-transform: capitalize;
     text-align: center;
 }
 
@@ -84,7 +85,7 @@ span::first-letter {
     line-height: 22px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
     .pokemon {
         flex-basis: 50%;
     }

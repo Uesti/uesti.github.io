@@ -1,5 +1,6 @@
 const POKEMONS = 151
 let num = []
+
 async function fetchPokemon() {
     for(i = 1; i <= POKEMONS; i++) {
         if(!num.includes(i)) {
@@ -54,9 +55,9 @@ async function fetchPokemon() {
 
 function addPokemon(pokemon) {
     let div = document.createElement('div')
-    let titulo = document.createElement('h2')
+    let nome = document.createElement('p')
     let sprite = document.createElement('img')
-    let info = document.createElement('span')
+    let id = document.createElement('p')
     let main = document.querySelector('#pokemons')
 
     let cache = document.createElement('img')
@@ -66,17 +67,20 @@ function addPokemon(pokemon) {
     })
 
     div.className = `pokemon ${pokemon.tipo[0]}`
-    titulo.textContent = pokemon.nome
+    nome.textContent = pokemon.nome
     sprite.src = pokemon.img[0]
     sprite.alt = pokemon.nome
-    info.textContent = pokemon.tipo.join(' and ')
+    id.textContent = `#${pokemon.id}`
 
+    nome.className = 'nome'
+    id.className = 'id'
+    
     cache.src = pokemon.img[1]
     cache.style.display = 'none'
 
-    div.appendChild(titulo)
+    div.appendChild(id)
     div.appendChild(sprite)
-    div.appendChild(info)
+    div.appendChild(nome)
     div.appendChild(cache)
     
     main.appendChild(div)
