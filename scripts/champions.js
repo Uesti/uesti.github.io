@@ -1,7 +1,7 @@
 champs = []
 
 async function fetchChampion() {
-    const URL = `http://ddragon.leagueoflegends.com/cdn/12.4.1/data/pt_BR/champion.json`
+    const URL = `https://ddragon.leagueoflegends.com/cdn/12.4.1/data/pt_BR/champion.json`
 
     fetch(URL)
     .then(response => {
