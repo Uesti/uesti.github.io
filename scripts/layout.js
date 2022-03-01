@@ -53,7 +53,6 @@ document.querySelector('#refresh')
         document.querySelector('#build').removeChild(i)
     })
     randomItem()
-    fetchChampion()
 })
 
 
