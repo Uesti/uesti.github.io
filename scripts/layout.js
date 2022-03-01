@@ -52,6 +52,7 @@ document.querySelector('#refresh')
         console.log
         document.querySelector('#build').removeChild(i)
     })
+    randomChampion(champs)
     randomItem()
 })
 

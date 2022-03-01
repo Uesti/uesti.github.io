@@ -1,7 +1,7 @@
 const itens = []
 
 async function fetchItem() {
-    const URL = 'https://ddragon.leagueoflegends.com/cdn/12.4.1/data/pt_BR/item.json'
+    const URL = 'http://ddragon.leagueoflegends.com/cdn/12.4.1/data/pt_BR/item.json'
     
     await fetch(URL)
     .then(request => {
@@ -20,7 +20,7 @@ async function fetchItem() {
                     item = {
                         nome: items[i].name,
                         descricao: items[i].description,
-                        img: `https://ddragon.leagueoflegends.com/cdn/12.4.1/img/item/${items[i].image.full}`,
+                        img: `http://ddragon.leagueoflegends.com/cdn/12.4.1/img/item/${items[i].image.full}`,
                         tags: items[i].tags,
                         mitico: null,
                         inicial: null,
@@ -70,7 +70,6 @@ async function fetchItem() {
 function randomItem() {
     let escolhidos = []
     
-    fetchChampion()
     randomRole()
 
     for (let num = 0; num < 7; num++) {

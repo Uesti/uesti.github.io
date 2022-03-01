@@ -3,7 +3,7 @@ body {
     margin: 0 auto;
     font-family: sans-serif;
     background-repeat: no-repeat;
-    background-size: 105%;
+    background-size: auto 110%;
 }
 
 header {
