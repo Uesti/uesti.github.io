@@ -2,8 +2,8 @@ body {
     background-image: url('https://forums.comunidades.riotgames.com/t5/image/serverpage/image-id/31362i4AB508A861033505?v=v2');
     margin: 0 auto;
     font-family: sans-serif;
-    background-repeat: no-repeat;
-    background-size: auto 110%;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 header {
