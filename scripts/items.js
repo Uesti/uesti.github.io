@@ -20,7 +20,7 @@ async function fetchItem() {
                     item = {
                         nome: items[i].name,
                         descricao: items[i].description,
-                        img: `http://ddragon.leagueoflegends.com/cdn/12.4.1/img/item/${items[i].image.full}`,
+                        img: `https://ddragon.leagueoflegends.com/cdn/12.4.1/img/item/${items[i].image.full}`,
                         tags: items[i].tags,
                         mitico: null,
                         inicial: null,
