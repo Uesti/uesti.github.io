@@ -67,14 +67,17 @@ function random(min, max) {
 }
 
 function arrumaTela() {
+    let build = document.querySelector('#build')
+    let champ = document.querySelector('#campeao')
+    let itens = document.querySelector('#itens')
     if (window.screen.width <= 765) {
-        build = document.querySelector('#build')
-        champ = document.querySelector('#campeao')
-    
         champ.appendChild(build)
     }
+    else {
+        console.log('oi')
+        itens.appendChild(build)
+    }
 }
-
 window.addEventListener('orientationchange', arrumaTela);
 
 arrumaTela()
