@@ -96,6 +96,9 @@ h3 {
         margin: 1vh;
         height: 35vh;
     }
+    #itens div {
+        margin-top: 9vh;
+    }
     #refresh {
         margin-top: 4%;
         width: 4vh;
