@@ -65,3 +65,10 @@ function random(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+if (window.screen.width <= 765) {
+    build = document.querySelector('#build')
+    champ = document.querySelector('#campeao')
+
+    champ.appendChild(build)
+}
