@@ -5,15 +5,16 @@ async function fetchVersion() {
     .then(response => {
         response.json()
         .then(request => {
-            return[request[0]]
+            return request[0]
         })
     })
 }
 
+versao = fetchVersion()
 champs = []
 
 async function fetchChampion() {
-    const URL = `https://ddragon.leagueoflegends.com/cdn/${fetchVersion()}/data/pt_BR/champion.json`
+    const URL = `https://ddragon.leagueoflegends.com/cdn/${versao}/data/pt_BR/champion.json`
 
     fetch(URL)
     .then(response => {
