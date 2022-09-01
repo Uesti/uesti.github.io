@@ -1,7 +1,19 @@
+async function fetchVersion() {
+    const URL = `https://ddragon.leagueoflegends.com/api/versions.json`
+
+    fetch(URL)
+    .then(response => {
+        response.json()
+        .then(request => {
+            return[request[0]]
+        })
+    })
+}
+
 champs = []
 
 async function fetchChampion() {
-    const URL = `https://ddragon.leagueoflegends.com/cdn/12.4.1/data/pt_BR/champion.json`
+    const URL = `https://ddragon.leagueoflegends.com/cdn/${fetchVersion()}/data/pt_BR/champion.json`
 
     fetch(URL)
     .then(response => {

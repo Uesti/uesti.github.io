@@ -1,7 +1,7 @@
 const itens = []
 
 async function fetchItem() {
-    const URL = 'https://ddragon.leagueoflegends.com/cdn/12.4.1/data/pt_BR/item.json'
+    const URL = `https://ddragon.leagueoflegends.com/cdn/${fetchVersion()}/data/pt_BR/item.json`
     
     await fetch(URL)
     .then(request => {
