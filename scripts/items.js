@@ -16,9 +16,9 @@ async function fetchItem(versao) {
                 //
                 // filtro de itens
                 //
-                if (!items[i].requiredChampion && !items[i].into && items[i].maps[11] 
+                if ((!items[i].requiredChampion && !items[i].into && !items[i].requiredAlly && items[i].maps[11] 
                     && !items[i].consumed && items[i].inStore == undefined && items[i].gold.base != 0
-                    && items[i].name != 'Lâmina de Obsidiana') {
+                    && items[i].name != 'Lâmina de Obsidiana') || items[i].description.includes('rarityMythic')) {
                     item = {
                         nome: items[i].name,
                         descricao: items[i].description,
