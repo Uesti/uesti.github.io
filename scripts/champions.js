@@ -5,6 +5,7 @@ async function fetchVersao() {
     .then(response => {
         response.json()
         .then(request => {
+            console.log(request[0])
             return request[0]
         })
     })
