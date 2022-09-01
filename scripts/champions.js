@@ -1,4 +1,4 @@
-const versao = function() {
+function fetchVersao(){
     const URL = `https://ddragon.leagueoflegends.com/api/versions.json`
 
     fetch(URL)
@@ -11,6 +11,7 @@ const versao = function() {
     })
 }
 
+const versao = fetchVersao()
 let champs = []
 
 async function fetchChampion() {
