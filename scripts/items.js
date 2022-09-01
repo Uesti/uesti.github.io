@@ -21,7 +21,7 @@ async function fetchItem(versao) {
                     item = {
                         nome: items[i].name,
                         descricao: items[i].description,
-                        img: `https://ddragon.leagueoflegends.com/cdn/12.4.1/img/item/${items[i].image.full}`,
+                        img: `https://ddragon.leagueoflegends.com/cdn/${versao}/img/item/${items[i].image.full}`,
                         tags: items[i].tags,
                         mitico: null,
                         inicial: null,
@@ -135,7 +135,9 @@ function randomItem() {
                 item = itens[random(0, itens.length)]
             }
         }
+        console.log(item)
         escolhidos.push(item)
     }
+    console.log(escolhidos)
     addItens(escolhidos)
 }

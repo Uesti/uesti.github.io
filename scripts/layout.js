@@ -74,7 +74,6 @@ function arrumaTela() {
         champ.appendChild(build)
     }
     else {
-        console.log('oi')
         itens.appendChild(build)
     }
 }
