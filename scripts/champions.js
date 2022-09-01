@@ -1,7 +1,7 @@
-versao = async function fetchVersion() {
+const versao = () => {
     const URL = `https://ddragon.leagueoflegends.com/api/versions.json`
 
-    fetch(URL)
+    await fetch(URL)
     .then(response => {
         response.json()
         .then(request => {
@@ -9,12 +9,12 @@ versao = async function fetchVersion() {
         })
     })
 }
-champs = []
+let champs = []
 
 async function fetchChampion() {
     const URL = `https://ddragon.leagueoflegends.com/cdn/${versao}/data/pt_BR/champion.json`
 
-    fetch(URL)
+    await fetch(URL)
     .then(response => {
         response.json()
         .then(request => {
