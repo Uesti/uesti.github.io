@@ -1,6 +1,6 @@
 const itens = []
 
-async function fetchItem() {
+async function fetchItem(versao) {
     const URL = `https://ddragon.leagueoflegends.com/cdn/${versao}/data/pt_BR/item.json`
     console.log(URL)
     

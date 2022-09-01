@@ -1,20 +1,20 @@
-function fetchVersao(){
+async function fetchVersao(){
     const URL = `https://ddragon.leagueoflegends.com/api/versions.json`
 
-    fetch(URL)
+    await fetch(URL)
     .then(response => {
         response.json()
         .then(request => {
             console.log('Versão: ' + request[0])
-            return request[0]
+            await fetchChampion(versao)
+            await fetchItem(versao)
         })
     })
 }
 
-const versao = fetchVersao()
 let champs = []
 
-async function fetchChampion() {
+async function fetchChampion(versao) {
     const URL = `https://ddragon.leagueoflegends.com/cdn/${versao}/data/pt_BR/champion.json`
     console.log(URL)
 
@@ -38,4 +38,4 @@ async function fetchChampion() {
     })
 }
 
-fetchChampion()
+fetchVersao()
