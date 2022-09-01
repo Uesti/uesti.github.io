@@ -6,8 +6,8 @@ async function fetchVersao(){
         response.json()
         .then(request => {
             console.log('Versão: ' + request[0])
-            await fetchChampion(versao)
-            await fetchItem(versao)
+            fetchChampion(versao)
+            fetchItem(versao)
         })
     })
 }
