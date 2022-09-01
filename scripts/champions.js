@@ -1,4 +1,4 @@
-async function fetchVersion() {
+versao = async function fetchVersion() {
     const URL = `https://ddragon.leagueoflegends.com/api/versions.json`
 
     fetch(URL)
@@ -9,8 +9,6 @@ async function fetchVersion() {
         })
     })
 }
-
-versao = fetchVersion()
 champs = []
 
 async function fetchChampion() {
