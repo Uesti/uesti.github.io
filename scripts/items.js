@@ -11,6 +11,7 @@ async function fetchItem(versao) {
             items = response.data
 
             for (i in items) {
+                console.log(item[i])
 
                 //
                 // filtro de itens
@@ -31,6 +32,7 @@ async function fetchItem(versao) {
                     }
 
                     if (item.descricao.includes('rarityMythic')) {
+                        console.log('MITICO!' + item[i].name)
                         item.mitico = true
                     } else {
                         item.mitico = false
