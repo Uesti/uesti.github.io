@@ -13,7 +13,7 @@ async function fetchVersao() {
 let champs = []
 
 async function fetchChampion() {
-    const URL = `https://ddragon.leagueoflegends.com/cdn/${await fetchVersao()}/data/pt_BR/champion.json`
+    const URL = await `https://ddragon.leagueoflegends.com/cdn/${fetchVersao()}/data/pt_BR/champion.json`
 
     await fetch(URL)
     .then(response => {
