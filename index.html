@@ -1,37 +1,57 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Trollbuild</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cartas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Trollbuild</h1>
+  <div class="pagina">
+
+    <header class="cabecalho" id="cabecalho" hidden>
+      <h1 id="titulo"></h1>
+      <p id="subtitulo"></p>
     </header>
-    <main>
-        <section id="campeao">
-            <h2>Nome</h2>
-            <img>
-        </section>
-        
-        <section id="itens">
-            <div id="inicial">
-                <h3>Item inicial</h3>
-            </div>
-            <div id="posicao">
-                <h3>Posição</h3>
-                <img>
-            </div>
-            <div id="build">
-                <h3>Build</h3>
-            </div>
-        </section>
-        <img src="https://cdn-icons-png.flaticon.com/512/61/61225.png" id="refresh">
-    </main>
-    
+
+    <nav class="decks" id="seletor-deck" aria-label="Escolha o baralho" hidden></nav>
+
+    <div class="barra" id="barra" hidden>
+      <div class="seletor-modo" id="seletor-modo" role="group" aria-label="Modo de exibição" hidden>
+        <button type="button" class="botao" id="modo-grade" aria-pressed="false"></button>
+        <button type="button" class="botao" id="modo-pilha" aria-pressed="false"></button>
+      </div>
+      <div class="filtros" id="filtros"></div>
+      <div class="acoes">
+        <span class="contador" id="contador" hidden></span>
+        <button type="button" class="botao" id="btn-descartar" hidden></button>
+        <button type="button" class="botao" id="btn-voltar" hidden></button>
+        <button type="button" class="botao" id="btn-virar" hidden></button>
+        <button type="button" class="botao" id="btn-reiniciar" hidden></button>
+      </div>
+    </div>
+
+    <!-- modo grade: todas as cartas lado a lado -->
+    <main class="grade" id="grade" aria-live="polite"></main>
+
+    <!-- modo pilha: baralho de um lado, descarte do outro -->
+    <section class="pilha" id="pilha" aria-live="polite" hidden>
+      <div class="pilha-coluna">
+        <div class="pilha-slot" id="monte">
+          <p class="pilha-vazia" id="pilha-vazia" hidden></p>
+        </div>
+        <span class="pilha-rotulo" id="rotulo-monte"></span>
+      </div>
+      <div class="pilha-coluna" id="coluna-descarte" hidden>
+        <div class="pilha-slot" id="descarte"></div>
+        <span class="pilha-rotulo" id="rotulo-descarte"></span>
+      </div>
+    </section>
+
+    <div class="aviso" id="aviso" hidden></div>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
-<script src="scripts/champions.js"></script>
-<script src="scripts/items.js"></script>
-<script src="scripts/layout.js"></script>
 </html>

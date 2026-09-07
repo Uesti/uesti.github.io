@@ -1,0 +1,297 @@
+{
+  "config": {
+    "titulo": "Cartas Eróticas",
+    "subtitulo": "Embaralhado, mas as cartas mais longas tendem a sair no fim",
+    "modo": "pilha",
+    "embaralhar": true,
+    "pesosPorTag": {
+      "30 sec": -1,
+      "40 sec": 0,
+      "90 sec": 1
+    },
+    "mostrarFiltros": true,
+    "alturaCarta": 380,
+    "larguraCarta": 300,
+    "tema": {
+      "fundoPagina": "radial-gradient(circle at 30% 0%, #3a1020 0%, #140609 65%)",
+      "corDestaque": "#e8536f",
+      "corTexto": "#f6e9ec",
+      "corTextoSuave": "#b08a92"
+    },
+    "verso": {
+      "fundo": "linear-gradient(150deg, #8c1230 0%, #4a0718 100%)",
+      "icone": "♥",
+      "texto": "Cartas Eróticas",
+      "padrao": true
+    },
+    "frente": {
+      "fundo": "#fff8f4",
+      "corTexto": "#3d1119",
+      "alinhamento": "center"
+    },
+    "pilha": {
+      "textoFim": "Acabou o baralho",
+      "textoContador": "{restantes} de {total} restantes"
+    },
+    "textoFiltroTodos": "Todas"
+  },
+  "cartas": [
+    {
+      "id": "1",
+      "texto": "Lamba lentamente a genitália do parceiro, usando só a ponta da língua.",
+      "peso": 0.2,
+      "tempo": 30,
+      "rodape": "Carta 1",
+      "tags": [
+        "30 sec"
+      ]
+    },
+    {
+      "id": "2",
+      "texto": "Simule penetração com a roupa, fazendo movimentos intensos no colo do parceiro.",
+      "peso": -0.3,
+      "tempo": 30,
+      "rodape": "Carta 2",
+      "tags": [
+        "30 sec"
+      ]
+    },
+    {
+      "id": "3",
+      "texto": "Chupe o mamilo do parceiro enquanto estimula com a mão entre as pernas.",
+      "peso": -0.3,
+      "tempo": 30,
+      "rodape": "Carta 3",
+      "tags": [
+        "30 sec"
+      ]
+    },
+    {
+      "id": "5",
+      "texto": "Lamba o parceiro da nuca até a virilha, sem pular nenhuma parte.",
+      "peso": -0.3,
+      "tempo": 40,
+      "rodape": "Carta 5",
+      "tags": [
+        "40 sec"
+      ]
+    },
+    {
+      "id": "6",
+      "texto": "Introduza um dedo (ou brinquedo) no parceiro enquanto beija profundamente.",
+      "peso": 0.5,
+      "tempo": 40,
+      "rodape": "Carta 6",
+      "tags": [
+        "40 sec"
+      ]
+    },
+    {
+      "id": "7",
+      "texto": "Coloque-se de quatro e ofereça o corpo para o parceiro explorar à vontade.",
+      "peso": 0.21,
+      "tempo": 40,
+      "rodape": "Carta 7",
+      "tags": [
+        "40 sec"
+      ]
+    },
+    {
+      "id": "8",
+      "texto": "Use a boca para molhar e estimular os testículos ou clitóris do parceiro.",
+      "peso": -0.18,
+      "tempo": 30,
+      "rodape": "Carta 8",
+      "tags": [
+        "30 sec"
+      ]
+    },
+    {
+      "id": "9",
+      "texto": "Sente-se sobre o rosto do parceiro para receber um oral intenso.",
+      "peso": 0.7,
+      "tempo": 40,
+      "rodape": "Carta 9",
+      "tags": [
+        "40 sec"
+      ]
+    },
+    {
+      "id": "11",
+      "texto": "Realize sexo oral com movimentos profundos e intensos.",
+      "peso": 0.11,
+      "tempo": 40,
+      "rodape": "Carta 11",
+      "tags": [
+        "40 sec"
+      ]
+    },
+    {
+      "id": "12",
+      "texto": "Fique totalmente nu e use os pés para tocar e masturbar o parceiro.",
+      "peso": 0.4,
+      "tempo": 30,
+      "rodape": "Carta 12",
+      "tags": [
+        "30 sec"
+      ]
+    },
+    {
+      "id": "14",
+      "texto": "Masturbe o parceiro com as duas mãos enquanto beija o pescoço dele(a).",
+      "peso": -0.04,
+      "tempo": 30,
+      "rodape": "Carta 14",
+      "tags": [
+        "30 sec"
+      ]
+    },
+    {
+      "id": "15",
+      "texto": "Beije e morda levemente as nádegas do parceiro, depois lamba intensamente.",
+      "peso": 0.1,
+      "tempo": 30,
+      "rodape": "Carta 15",
+      "tags": [
+        "30 sec"
+      ]
+    },
+    {
+      "id": "16",
+      "texto": "Coloque o parceiro contra a parede, abaixe a roupa e provoque com penetração.",
+      "peso": 0.8,
+      "tempo": 40,
+      "rodape": "Carta 16",
+      "tags": [
+        "40 sec"
+      ]
+    },
+    {
+      "id": "17",
+      "texto": "Chupe o dedo do parceiro como se estivesse fazendo sexo oral.",
+      "peso": -0.2,
+      "tempo": 30,
+      "rodape": "Carta 17",
+      "tags": [
+        "30 sec"
+      ]
+    },
+    {
+      "id": "18",
+      "texto": "Introduza dois dedos no parceiro enquanto o masturba com a outra mão.",
+      "peso": 0.2,
+      "tempo": 30,
+      "rodape": "Carta 18",
+      "tags": [
+        "30 sec"
+      ]
+    },
+    {
+      "id": "19",
+      "texto": "Sente-se no parceiro e comece uma penetração (real) bem lenta.",
+      "peso": 0.75,
+      "tempo": 90,
+      "rodape": "Carta 19",
+      "tags": [
+        "90 sec"
+      ]
+    },
+    {
+      "id": "20",
+      "texto": "Coloque-se por cima e conduza o ritmo da penetração com intensidade.",
+      "peso": 0.75,
+      "tempo": 90,
+      "rodape": "Carta 20",
+      "tags": [
+        "90 sec"
+      ]
+    },
+    {
+      "id": "21",
+      "texto": "Escolha uma posição do Kama Sutra e execute com penetração intensa.",
+      "peso": 0.99,
+      "tempo": 90,
+      "rodape": "Carta 21",
+      "tags": [
+        "90 sec"
+      ]
+    },
+    {
+      "id": "23",
+      "texto": "Masturbe-se na frente do parceiro até quase gozar.",
+      "peso": 0.18,
+      "rodape": "Carta 23",
+      "tags": []
+    },
+    {
+      "id": "24",
+      "texto": "Receba penetração por trás (estilo 'cachorrinho'), mantendo o olhar para trás.",
+      "peso": 0.9,
+      "tempo": 90,
+      "rodape": "Carta 24",
+      "tags": [
+        "90 sec"
+      ]
+    },
+    {
+      "id": "25",
+      "texto": "Realize sexo oral enquanto o parceiro filma com o celular.",
+      "peso": 0.23,
+      "tempo": 40,
+      "rodape": "Carta 25",
+      "tags": [
+        "40 sec"
+      ]
+    },
+    {
+      "id": "26",
+      "texto": "Lamba a parte interna das coxas do parceiro lentamente até ele(a) implorar por mais.",
+      "peso": -0.25,
+      "tempo": 30,
+      "rodape": "Carta 26",
+      "tags": [
+        "30 sec"
+      ]
+    },
+    {
+      "id": "27",
+      "texto": "Penetração com as pernas apoiadas nos ombros do parceiro.",
+      "peso": 0.91,
+      "tempo": 90,
+      "rodape": "Carta 27",
+      "tags": [
+        "90 sec"
+      ]
+    },
+    {
+      "id": "28",
+      "texto": "Deite-se e deixe o parceiro usar o corpo inteiro para se esfregar em você.",
+      "peso": -0.1,
+      "tempo": 30,
+      "rodape": "Carta 28",
+      "tags": [
+        "30 sec"
+      ]
+    },
+    {
+      "id": "29",
+      "texto": "Fique em cima e realize a penetração com movimentos circulares, sem pressa.",
+      "peso": 0.8,
+      "tempo": 40,
+      "rodape": "Carta 29",
+      "tags": [
+        "40 sec"
+      ]
+    },
+    {
+      "id": "30",
+      "texto": "Finalizem com orgasmo real (ou cheguem o mais perto possível). Sem pausas.",
+      "peso": 1,
+      "tempo": 40,
+      "rodape": "Carta 30",
+      "tags": [
+        "40 sec"
+      ]
+    }
+  ]
+}

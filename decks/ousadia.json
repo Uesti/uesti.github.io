@@ -1,0 +1,369 @@
+{
+  "config": {
+    "titulo": "Baralho da Ousadia",
+    "subtitulo": "Sorteie uma carta, cumpra o desafio e passe a vez",
+    "modo": "pilha",
+    "embaralhar": true,
+    "pesosPorTag": [
+
+    ],
+    "mostrarFiltros": false,
+    "alturaCarta": 380,
+    "larguraCarta": 300,
+    "tema": {
+      "fundoPagina": "radial-gradient(circle at 70% 0%, #2a1348 0%, #0d0714 65%)",
+      "corDestaque": "#b98bff",
+      "corTexto": "#efe9f8",
+      "corTextoSuave": "#9b8fb3"
+    },
+    "verso": {
+      "fundo": "linear-gradient(150deg, #5b2ea6 0%, #23103f 100%)",
+      "icone": "♠",
+      "texto": "Ousadia",
+      "padrao": true
+    },
+    "frente": {
+      "fundo": "#faf7ff",
+      "corTexto": "#241436",
+      "alinhamento": "center",
+      "alinhamentoVertical": "center"
+    },
+    "pilha": {
+      "textoFim": "Acabaram os desafios",
+      "textoContador": "{restantes} de {total} restantes"
+    }
+  },
+  "cartas": [
+    {
+      "id": "5",
+      "texto": "Coloque uma venda nos olhos, estenda a língua e tente adivinhar qual parte do corpo ele encosta na sua língua.",
+      "rodape": "Carta 5",
+      "tags": [
+        "Provocação"
+      ]
+    },
+    {
+      "id": "9",
+      "texto": "Fale no ouvido dele a coisa mais ousada que você gostaria de fazer esta noite.",
+      "rodape": "Carta 9",
+      "tags": [
+        "Provocação"
+      ]
+    },
+    {
+      "id": "11",
+      "texto": "Escolha três partes do seu corpo para seu parceiro tocar e beijar.",
+      "rodape": "Carta 11",
+      "tags": [
+        "Beijo"
+      ]
+    },
+    {
+      "id": "12",
+      "texto": "Tente fazer um espacate com apenas sutiã e calcinha. Se não conseguir, tire uma das peças.",
+      "rodape": "Carta 12",
+      "tags": [
+        "Despir"
+      ]
+    },
+    {
+      "id": "13",
+      "texto": "Toque suavemente o corpo do seu parceiro com o seu peito.",
+      "rodape": "Carta 13",
+      "tags": [
+        "Provocação"
+      ]
+    },
+    {
+      "id": "15",
+      "texto": "Até suas próximas três vezes, diga 'sexy' após cada frase.",
+      "rodape": "Carta 15",
+      "tags": [
+        "Provocação"
+      ]
+    },
+    {
+      "id": "17",
+      "texto": "Você tem que experimentar a roupa íntima dele na frente dele.",
+      "rodape": "Carta 17",
+      "tags": [
+        "Provocação"
+      ]
+    },
+    {
+      "id": "18",
+      "texto": "Com os dedos, encontre uma maneira de provocar arrepios no seu parceiro agora.",
+      "rodape": "Carta 18",
+      "tags": [
+        "Provocação"
+      ]
+    },
+    {
+      "id": "19",
+      "texto": "Faça um elogio sincero para o corpo do seu parceiro.",
+      "rodape": "Carta 19",
+      "tags": [
+        "Provocação"
+      ]
+    },
+    {
+      "id": "24",
+      "texto": "Beije/lambe a orelha do seu parceiro por 10 segundos.",
+      "tempo": 10,
+      "rodape": "Carta 24",
+      "tags": [
+        "Beijo"
+      ]
+    },
+    {
+      "id": "25",
+      "texto": "Esfregue os mamilos até ficarem duros. Seu parceiro não tem permissão para te ajudar.",
+      "rodape": "Carta 25",
+      "tags": [
+        "Provocação"
+      ]
+    },
+    {
+      "id": "28",
+      "texto": "Beije a barriga do seu parceiro.",
+      "rodape": "Carta 28",
+      "tags": [
+        "Beijo"
+      ]
+    },
+    {
+      "id": "29",
+      "texto": "Lamba seu parceiro, começando pelo pescoço até a borda da roupa íntima.",
+      "rodape": "Carta 29",
+      "tags": [
+        "Provocação"
+      ]
+    },
+    {
+      "id": "30",
+      "texto": "Chupe os mamilos do seu parceiro por pelo menos 2 minutos.",
+      "tempo": 120,
+      "rodape": "Carta 30",
+      "tags": [
+        "Beijo"
+      ]
+    },
+    {
+      "id": "31",
+      "texto": "Mostre seus seios.",
+      "rodape": "Carta 31",
+      "tags": [
+        "Despir"
+      ]
+    },
+    {
+      "id": "33",
+      "texto": "Faça um pequeno striptease, mas apenas da cintura para cima.",
+      "rodape": "Carta 33",
+      "tags": [
+        "Despir"
+      ]
+    },
+    {
+      "id": "34",
+      "texto": "Imagine que você está fazendo um ensaio sensual. Faça sua pose.",
+      "rodape": "Carta 34",
+      "tags": [
+        "Provocação"
+      ]
+    },
+    {
+      "id": "35",
+      "texto": "Tire apenas o sutiã e entregue-o nas mãos do seu parceiro, sem tirar a camisa.",
+      "rodape": "Carta 35",
+      "tags": [
+        "Despir"
+      ]
+    },
+    {
+      "id": "36",
+      "texto": "Estimule duas partes do seu parceiro ao mesmo tempo usando as mãos e a boca.",
+      "rodape": "Carta 36",
+      "tags": [
+        "Provocação"
+      ]
+    },
+    {
+      "id": "37",
+      "texto": "Acaricie as coxas do seu parceiro por 30 segundos.",
+      "rodape": "Carta 37",
+      "tempo": 30,
+      "tags": [
+        "Provocação"
+      ]
+    },
+
+    {
+      "id": "39",
+      "texto": "Tente lamber seus próprios mamilos.",
+      "rodape": "Carta 39",
+      "tags": [
+        "Despir"
+      ]
+    },
+    {
+      "id": "40",
+      "texto": "Nos próximos dois minutos, você está no comando. Diga ao seu parceiro o que você quer que ele faça.",
+      "tempo": 120,
+      "rodape": "Carta 40"
+    },
+    {
+      "id": "41",
+      "texto": "Coloque bebida no corpo do seu parceiro e lamba.",
+      "rodape": "Carta 41"
+    },
+    {
+      "id": "44",
+      "texto": "Beije suavemente o lábio inferior do seu parceiro.",
+      "rodape": "Carta 44"
+    },
+    {
+      "id": "45",
+      "texto": "Faça 10 flexões com o seu parceiro embaixo de você e dê um beijo nele toda vez que descer.",
+      "rodape": "Carta 45"
+    },
+    {
+      "id": "46",
+      "texto": "Comporte-se como se fosse submisso a seu parceiro por 2 minutos.",
+      "tempo": 120,
+      "rodape": "Carta 46"
+    },
+    {
+      "id": "47",
+      "texto": "Aperte lentamente a virilha do seu parceiro.",
+      "rodape": "Carta 47"
+    },
+    {
+      "id": "48",
+      "texto": "Beije seu parceiro como se estivesse em um filme em câmera lenta.",
+      "rodape": "Carta 48"
+    },
+    {
+      "id": "49",
+      "texto": "Faça o que quiser com a bunda do seu parceiro. Não tenha pressa.",
+      "rodape": "Carta 49"
+    },
+    {
+      "id": "51",
+      "texto": "Falar o ato erótico que você mais gosta do seu parceiro.",
+      "rodape": "Carta 51"
+    },
+    {
+      "id": "52",
+      "texto": "Chupe o polegar do seu parceiro como se fosse um pirulito gostoso.",
+      "rodape": "Carta 52"
+    },
+    {
+      "id": "53",
+      "texto": "Pegue um cubo de gelo e passe-o para cima e para baixo no corpo do seu parceiro até que derreta.",
+      "rodape": "Carta 53"
+    },
+    {
+      "id": "54",
+      "texto": "Tire uma foto sexy de nudez e envie para seu parceiro.",
+      "rodape": "Carta 54"
+    },
+    {
+      "id": "55",
+      "texto": "Seduza seu parceiro com os dedos.",
+      "rodape": "Carta 55"
+    },
+    {
+      "id": "56",
+      "texto": "Amarre a mão do seu parceiro e escolha uma parte do seu corpo para beijar.",
+      "rodape": "Carta 56"
+    },
+    {
+      "id": "57",
+      "texto": "Beije seu parceiro sem tocá-lo.",
+      "rodape": "Carta 57"
+    },
+    {
+      "id": "61",
+      "texto": "Deixe seu parceiro observar você se masturbar por dois minuto.",
+      "tempo": 120,
+      "rodape": "Carta 61"
+    },
+    {
+      "id": "62",
+      "texto": "Chupe a parte favorita do corpo do seu parceiro.",
+      "rodape": "Carta 62"
+    },
+    {
+      "id": "63",
+      "texto": "Faça um boquete no seu parceiro.",
+      "rodape": "Carta 63"
+    },
+    {
+      "id": "64",
+      "texto": "Beije todo o corpo do seu parceiro nu na frente do espelho.",
+      "rodape": "Carta 64"
+    },
+    {
+      "id": "65",
+      "texto": "Deixe seu parceiro dar um comando simples para você seguir por 1 minuto.",
+      "tempo": 60,
+      "rodape": "Carta 65"
+    },
+    {
+      "id": "66",
+      "texto": "Seja dominante sobre o seu parceiro.",
+      "rodape": "Carta 66"
+    },
+    {
+      "id": "68",
+      "texto": "De um beijo no seu parceiro e morda lentamente o lábio dele.",
+      "rodape": "Carta 68"
+    },
+    {
+      "id": "69",
+      "texto": "Lamba todas as partes do corpo do seu parceiro.",
+      "rodape": "Carta 69"
+    },
+    {
+      "id": "72",
+      "texto": "Coloque uma quantidade generosa de gloss labial com sabor e beije seu parceiro de forma intensa até que os lábios dele também fiquem cobertos. Agora, seu parceiro tem que adivinhar o sabor.",
+      "rodape": "Carta 72"
+    },
+    {
+      "id": "73",
+      "texto": "Esfregue o seu nariz de um lado para o outro contra o nariz do seu parceiro e depois dê um beijo francês.",
+      "rodape": "Carta 73"
+    },
+    {
+      "id": "74",
+      "texto": "De um beijo molhado no seu parceiro.",
+      "rodape": "Carta 74"
+    },
+    {
+      "id": "75",
+      "texto": "Dancem nus com seu parceiro.",
+      "rodape": "Carta 75"
+    },
+    {
+      "id": "76",
+      "texto": "Jogue os próximos 2 turnos em topless.",
+      "rodape": "Carta 76"
+    },
+    {
+      "id": "77",
+      "texto": "Sente-se no colo do seu parceiro até a próxima turno.",
+      "rodape": "Carta 77"
+    },
+    {
+      "id": "78",
+      "texto": "Sente-se nos órgãos genitais do seu parceiro e se esfregue, você não pode usar as mãos. Por duas rodadas",
+      "rodape": "Carta 78"
+    },
+    {
+      "id": "79",
+      "texto": "Sente-se nos órgãos genitais do seu parceiro e se esfregue, você não pode usar as mãos. Por duas rodadas",
+      "rodape": "Carta 79"
+    }
+  ]
+}

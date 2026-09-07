@@ -1,0 +1,51 @@
+{
+  "config": {
+    "mostrarCabecalho": true,
+    "mostrarContador": true,
+    "mostrarSeletorDeck": true,
+    "mostrarSeletorModo": true,
+    "mostrarBotaoVirarTodas": true,
+    "mostrarBotaoReiniciar": true,
+    "mostrarTempo": true,
+    "textoTempoFim": "Tempo!",
+    "textoModoGrade": "Tabela",
+    "textoModoPilha": "Pilha",
+    "duracaoFlip": 600,
+    "eixoFlip": "y",
+    "espacamento": 22,
+    "pilha": {
+      "mostrarDescarte": false,
+      "descartarAoClicar": true,
+      "sumirSozinho": 0,
+      "sumirNoFimDoTempo": false,
+      "reembaralharNoFim": false,
+      "cartasVisiveis": 4,
+      "desvio": 7
+    }
+  },
+  "deckPadrao": "eroticas",
+  "decks": [
+    {
+      "id": "eroticas",
+      "nome": "Cartas Eróticas",
+      "arquivo": "decks/eroticas.json"
+    },
+    {
+      "id": "ousadia",
+      "nome": "Baralho da Ousadia",
+      "arquivo": "decks/ousadia.json"
+    },
+    {
+      "id": "verdade-ou-sacanagem",
+      "nome": "Verdade ou Sacanagem",
+      "descricao": "19 verdades e 19 sacanagens",
+      "arquivo": "decks/verdade-ou-sacanagem.json"
+    },
+    {
+      "id": "exemplo",
+      "nome": "Exemplo",
+      "arquivo": "decks/exemplo.json",
+      "oculto": true
+    }
+  ]
+}

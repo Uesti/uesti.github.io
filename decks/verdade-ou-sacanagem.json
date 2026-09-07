@@ -1,0 +1,376 @@
+{
+  "config": {
+    "titulo": "Verdade ou Sacanagem",
+    "subtitulo": "Escolha o lado — ou misture os dois e deixe a sorte decidir",
+    "modo": "pilha",
+    "embaralhar": true,
+    "mostrarFiltros": true,
+    "mostrarTags": false,
+    "textoFiltroTodos": "Misturar",
+    "alturaCarta": 380,
+    "larguraCarta": 300,
+    "tema": {
+      "fundoPagina": "radial-gradient(circle at 50% 0%, #4d1039 0%, #1a0714 65%)",
+      "corDestaque": "#ff8ec4",
+      "corTexto": "#fbeaf3",
+      "corTextoSuave": "#bf90aa"
+    },
+    "verso": {
+      "fundo": "linear-gradient(150deg, #e0489b 0%, #7d1050 100%)",
+      "icone": "?",
+      "texto": "Verdade ou Sacanagem",
+      "padrao": true
+    },
+    "frente": {
+      "fundo": "#fff5fa",
+      "corTexto": "#4a1030",
+      "alinhamento": "center",
+      "alinhamentoVertical": "center"
+    },
+    "pilha": {
+      "textoFim": "Acabaram as cartas deste lado",
+      "textoContador": "{restantes} de {total} restantes"
+    }
+  },
+  "cartas": [
+    {
+      "id": "v1",
+      "titulo": "Verdade",
+      "texto": "Diga uma fantasia erótica.",
+      "tags": [
+        "Verdade"
+      ],
+      "rodape": "Verdade 1"
+    },
+    {
+      "id": "v2",
+      "titulo": "Verdade",
+      "texto": "Conte um fetiche.",
+      "tags": [
+        "Verdade"
+      ],
+      "rodape": "Verdade 2"
+    },
+    {
+      "id": "v3",
+      "titulo": "Verdade",
+      "texto": "Diga o que mais gosta no corpo do seu amor.",
+      "tags": [
+        "Verdade"
+      ],
+      "rodape": "Verdade 3"
+    },
+    {
+      "id": "v4",
+      "titulo": "Verdade",
+      "texto": "Conte o que te deixa excitado.",
+      "tags": [
+        "Verdade"
+      ],
+      "rodape": "Verdade 4"
+    },
+    {
+      "id": "v5",
+      "titulo": "Verdade",
+      "texto": "Qual foi a melhor transa que já teve com seu amor?",
+      "tags": [
+        "Verdade"
+      ],
+      "rodape": "Verdade 5"
+    },
+    {
+      "id": "v6",
+      "titulo": "Verdade",
+      "texto": "Qual foi o melhor oral que já teve do seu amor?",
+      "tags": [
+        "Verdade"
+      ],
+      "rodape": "Verdade 6"
+    },
+    {
+      "id": "v7",
+      "titulo": "Verdade",
+      "texto": "O que você gostaria de inovar no sexo com seu amor?",
+      "tags": [
+        "Verdade"
+      ],
+      "rodape": "Verdade 7"
+    },
+    {
+      "id": "v8",
+      "titulo": "Verdade",
+      "texto": "O que mais te dá tesão durante as preliminares?",
+      "tags": [
+        "Verdade"
+      ],
+      "rodape": "Verdade 8"
+    },
+    {
+      "id": "v9",
+      "titulo": "Verdade",
+      "texto": "Em quais lugares, que estejam acessíveis no momento, você desejaria transar agora?",
+      "tags": [
+        "Verdade"
+      ],
+      "rodape": "Verdade 9"
+    },
+    {
+      "id": "v10",
+      "titulo": "Verdade",
+      "texto": "O que você mais gosta de ouvir durante o sexo?",
+      "tags": [
+        "Verdade"
+      ],
+      "rodape": "Verdade 10"
+    },
+    {
+      "id": "v11",
+      "titulo": "Verdade",
+      "texto": "Você curte joguinhos eróticos? Se sim, dê exemplo de um.",
+      "tags": [
+        "Verdade"
+      ],
+      "rodape": "Verdade 11"
+    },
+    {
+      "id": "v12",
+      "titulo": "Verdade",
+      "texto": "Você curte produtos de sexshop? Qual você tem mais vontade de experimentar com seu amor?",
+      "tags": [
+        "Verdade"
+      ],
+      "rodape": "Verdade 12"
+    },
+    {
+      "id": "v13",
+      "titulo": "Verdade",
+      "texto": "Qual posição lhe dá mais prazer?",
+      "tags": [
+        "Verdade"
+      ],
+      "rodape": "Verdade 13"
+    },
+    {
+      "id": "v14",
+      "titulo": "Verdade",
+      "texto": "Cite a primeira coisa que lhe vem à mente quando fala-se em sexo.",
+      "tags": [
+        "Verdade"
+      ],
+      "rodape": "Verdade 14"
+    },
+    {
+      "id": "v15",
+      "titulo": "Verdade",
+      "texto": "Você assiste a vídeos pornográficos? Com que frequência e o que faz enquanto assiste? Diga com detalhes.",
+      "tags": [
+        "Verdade"
+      ],
+      "rodape": "Verdade 15"
+    },
+    {
+      "id": "s1",
+      "titulo": "Sacanagem",
+      "texto": "Selinho! E um beijo beem demorado.",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 1"
+    },
+    {
+      "id": "s2",
+      "titulo": "Sacanagem",
+      "texto": "Amasso longo.",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 2"
+    },
+    {
+      "id": "s3",
+      "titulo": "Sacanagem",
+      "texto": "Lambidinhas e mordidinhas na orelha.",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 3"
+    },
+    {
+      "id": "s4",
+      "titulo": "Sacanagem",
+      "texto": "Carícias em todo o tórax e barriga.",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 4"
+    },
+    {
+      "id": "s5",
+      "titulo": "Sacanagem",
+      "texto": "Chupões na nuca.",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 5"
+    },
+    {
+      "id": "s6",
+      "titulo": "Sacanagem",
+      "texto": "Beijos na virilha.",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 6"
+    },
+    {
+      "id": "s7",
+      "titulo": "Sacanagem",
+      "texto": "Escolha um lugar e massageie sem pudores.",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 7"
+    },
+    {
+      "id": "s8",
+      "titulo": "Sacanagem",
+      "texto": "Beije com vontade a parte do corpo do seu amor que você mais gosta.",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 8"
+    },
+    {
+      "id": "s9",
+      "titulo": "Sacanagem",
+      "texto": "Beijos carinhosos nas partes íntimas.",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 9"
+    },
+    {
+      "id": "s10",
+      "titulo": "Sacanagem",
+      "texto": "Strip!",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 10"
+    },
+    {
+      "id": "s11",
+      "titulo": "Sacanagem",
+      "texto": "Masturbe-o(a).",
+      "tempo": 20,
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 11"
+    },
+    {
+      "id": "s12",
+      "titulo": "Sacanagem",
+      "texto": "Faça com que ele implore(a) para fazer amor.",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 12"
+    },
+    {
+      "id": "s13",
+      "titulo": "Sacanagem",
+      "texto": "Faça um oral e só pare se ele(a) pedir.",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 13"
+    },
+    {
+      "id": "s14",
+      "titulo": "Sacanagem",
+      "texto": "Rapidinha!",
+      "tempo": 90,
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 14"
+    },
+    {
+      "id": "s15",
+      "titulo": "Sacanagem",
+      "texto": "Escolha um lugar inusitado para fazer amor agora.",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 15"
+    },
+    {
+      "id": "s16",
+      "titulo": "Sacanagem",
+      "texto": "Escolha: Masturbá-lo(a) ou assistir ele(a) masturbando-se?",
+      "tempo": 20,
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 16"
+    },
+    {
+      "id": "s17",
+      "titulo": "Sacanagem",
+      "texto": "Escolha: Oral em você ou nele(a)?",
+      "tempo": 30,
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 17"
+    },
+    {
+      "id": "s18",
+      "titulo": "Sacanagem",
+      "texto": "Escolha: amasso com ou sem roupa?",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 18"
+    },
+    {
+      "id": "s19",
+      "titulo": "Sacanagem",
+      "texto": "Escolha: Sexo oral ou Masturbação a dois?",
+      "tempo": 60,
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 19"
+    },
+    {
+      "id": "s20",
+      "titulo": "Sacanagem",
+      "texto": "Escolha: Na cama ou no chuveiro?",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 20"
+    },
+    {
+      "id": "s21",
+      "titulo": "Sacanagem",
+      "texto": "Sacanagem: “Papai e mamãe” ou “De quatro”?",
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 21"
+    },
+    {
+      "id": "s22",
+      "titulo": "Sacanagem",
+      "texto": "69",
+      "tempo": 69,
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 22"
+    }
+  ]
+}

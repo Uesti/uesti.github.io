@@ -1,0 +1,134 @@
+{
+  "config": {
+    "titulo": "Jhennyfer",
+    "subtitulo": "Clique em uma carta para revelar o que está escrito",
+    "modo": "pilha",
+    "embaralhar": true,
+    "mostrarFiltros": true,
+    "alturaCarta": 380,
+    "larguraCarta": 300,
+    "tema": {
+      "fundoPagina": "radial-gradient(circle at 20% 0%, #23234a 0%, #101018 60%)",
+      "corTexto": "#ecebf5",
+      "corTextoSuave": "#a09fb3",
+      "corDestaque": "#f5c542",
+      "fonteTitulo": "Georgia, 'Times New Roman', serif",
+      "fonteTexto": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+      "raioBorda": "18px",
+      "sombra": "0 14px 34px rgba(0,0,0,0.45)"
+    },
+    "verso": {
+      "fundo": "linear-gradient(145deg, #33336b 0%, #1b1b3a 100%)",
+      "corTexto": "#ffffff",
+      "borda": "1px solid rgba(255,255,255,0.14)",
+      "icone": "?",
+      "texto": "Clique",
+      "imagem": null,
+      "padrao": true
+    },
+    "frente": {
+      "fundo": "#ffffff",
+      "corTexto": "#1a1a24",
+      "borda": "1px solid rgba(0,0,0,0.08)",
+      "alinhamento": "left"
+    },
+    "pilha": {
+      "mostrarDescarte": false,
+      "mostrarBotaoDescartar": true,
+      "mostrarBotaoVoltar": true,
+      "descartarAoClicar": true,
+      "sumirSozinho": 0,
+      "reembaralharNoFim": true,
+      "cartasVisiveis": 4,
+      "desvio": 7,
+      "inclinacao": 3,
+      "textoDescartar": "Descartar",
+      "textoVoltar": "Voltar",
+      "textoMonte": "Baralho",
+      "textoDescarte": "Descarte",
+      "textoFim": "Acabaram as cartas",
+      "textoContador": "{restantes} no baralho · {descartadas} descartadas"
+    }
+  },
+  "cartas": [
+    {
+      "id": "1",
+      "titulo": "Primeira carta",
+      "texto": "Este texto veio direto do arquivo **cartas.json**. Edite o arquivo, salve e recarregue a página: o site inteiro muda.",
+      "tags": [
+        "basico"
+      ],
+      "rodape": "Carta 01"
+    },
+    {
+      "id": "2",
+      "titulo": "Formatação no texto",
+      "texto": [
+        "Dá para usar **negrito**, *itálico* e `código` dentro do texto.",
+        "Uma lista dentro do array vira um novo parágrafo, como este aqui."
+      ],
+      "tags": [
+        "basico"
+      ]
+    },
+    {
+      "id": "3",
+      "titulo": "Cores por carta",
+      "texto": "Cada carta pode ter as próprias cores. Esta usa um verso vermelho e uma frente creme, definidos só nela.",
+      "tags": [
+        "estilo"
+      ],
+      "frente": {
+        "fundo": "#fff6e9",
+        "corTexto": "#5c2318",
+        "borda": "1px solid #e6cfae"
+      }
+    },
+    {
+      "id": "4",
+      "titulo": "Com imagem",
+      "texto": "Coloque o caminho de uma imagem em `imagem` e ela aparece no topo da frente da carta. Pode ser um arquivo local ou um link.",
+      "imagem": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2354d1c5'/%3E%3Cstop offset='1' stop-color='%233b6ef5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='200' fill='url(%23g)'/%3E%3Ccircle cx='310' cy='60' r='42' fill='%23ffffff' opacity='0.35'/%3E%3C/svg%3E",
+      "textoImagem": "Exemplo de imagem",
+      "tags": [
+        "estilo"
+      ]
+    },
+    {
+      "id": "5",
+      "titulo": "Alinhamento centralizado",
+      "texto": "O alinhamento também é configurável, por carta ou para todas de uma vez.",
+      "tags": [
+        "estilo"
+      ],
+      "frente": {
+        "alinhamento": "center"
+      }
+    },
+    {
+      "id": "6",
+      "titulo": "Links",
+      "texto": "Você pode escrever links assim: [abrir o MDN](https://developer.mozilla.org). Eles abrem em uma nova aba.",
+      "tags": [
+        "basico"
+      ]
+    },
+    {
+      "id": "7",
+      "titulo": "Verso personalizado",
+      "texto": "O verso aceita um ícone (qualquer caractere ou emoji), um texto curto, cores próprias e até uma imagem de fundo.",
+      "tags": [
+        "estilo"
+      ]
+    },
+    {
+      "id": "8",
+      "titulo": "Adicione quantas quiser",
+      "texto": "Copie qualquer bloco desta lista, troque o `id` e escreva seu conteúdo. A grade se ajusta sozinha.",
+      "tags": [
+        "basico"
+      ],
+      "rodape": "Última carta do exemplo"
+    }
+  ]
+}
