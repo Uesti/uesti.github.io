@@ -4,6 +4,10 @@
     "subtitulo": "Escolha o lado — ou misture os dois e deixe a sorte decidir",
     "modo": "pilha",
     "embaralhar": true,
+    "pesosPorTag": {
+      "Verdade": -0.35,
+      "Sacanagem": 0.35
+    },
     "mostrarFiltros": true,
     "mostrarTags": false,
     "textoFiltroTodos": "Misturar",
@@ -37,6 +41,7 @@
       "id": "v1",
       "titulo": "Verdade",
       "texto": "Diga uma fantasia erótica.",
+      "peso": -0.28,
       "tags": [
         "Verdade"
       ],
@@ -46,6 +51,7 @@
       "id": "v2",
       "titulo": "Verdade",
       "texto": "Conte um fetiche.",
+      "peso": -0.19,
       "tags": [
         "Verdade"
       ],
@@ -55,6 +61,7 @@
       "id": "v3",
       "titulo": "Verdade",
       "texto": "Diga o que mais gosta no corpo do seu amor.",
+      "peso": -0.65,
       "tags": [
         "Verdade"
       ],
@@ -64,6 +71,7 @@
       "id": "v4",
       "titulo": "Verdade",
       "texto": "Conte o que te deixa excitado.",
+      "peso": -0.46,
       "tags": [
         "Verdade"
       ],
@@ -73,6 +81,7 @@
       "id": "v5",
       "titulo": "Verdade",
       "texto": "Qual foi a melhor transa que já teve com seu amor?",
+      "peso": 0.37,
       "tags": [
         "Verdade"
       ],
@@ -82,6 +91,7 @@
       "id": "v6",
       "titulo": "Verdade",
       "texto": "Qual foi o melhor oral que já teve do seu amor?",
+      "peso": 0.46,
       "tags": [
         "Verdade"
       ],
@@ -91,6 +101,7 @@
       "id": "v7",
       "titulo": "Verdade",
       "texto": "O que você gostaria de inovar no sexo com seu amor?",
+      "peso": 0.19,
       "tags": [
         "Verdade"
       ],
@@ -100,6 +111,7 @@
       "id": "v8",
       "titulo": "Verdade",
       "texto": "O que mais te dá tesão durante as preliminares?",
+      "peso": -0.37,
       "tags": [
         "Verdade"
       ],
@@ -109,6 +121,7 @@
       "id": "v9",
       "titulo": "Verdade",
       "texto": "Em quais lugares, que estejam acessíveis no momento, você desejaria transar agora?",
+      "peso": 0.65,
       "tags": [
         "Verdade"
       ],
@@ -118,6 +131,7 @@
       "id": "v10",
       "titulo": "Verdade",
       "texto": "O que você mais gosta de ouvir durante o sexo?",
+      "peso": -0.09,
       "tags": [
         "Verdade"
       ],
@@ -127,6 +141,7 @@
       "id": "v11",
       "titulo": "Verdade",
       "texto": "Você curte joguinhos eróticos? Se sim, dê exemplo de um.",
+      "peso": 0.09,
       "tags": [
         "Verdade"
       ],
@@ -136,6 +151,7 @@
       "id": "v12",
       "titulo": "Verdade",
       "texto": "Você curte produtos de sexshop? Qual você tem mais vontade de experimentar com seu amor?",
+      "peso": 0.28,
       "tags": [
         "Verdade"
       ],
@@ -145,6 +161,7 @@
       "id": "v13",
       "titulo": "Verdade",
       "texto": "Qual posição lhe dá mais prazer?",
+      "peso": 0.0,
       "tags": [
         "Verdade"
       ],
@@ -154,6 +171,7 @@
       "id": "v14",
       "titulo": "Verdade",
       "texto": "Cite a primeira coisa que lhe vem à mente quando fala-se em sexo.",
+      "peso": -0.56,
       "tags": [
         "Verdade"
       ],
@@ -163,6 +181,7 @@
       "id": "v15",
       "titulo": "Verdade",
       "texto": "Você assiste a vídeos pornográficos? Com que frequência e o que faz enquanto assiste? Diga com detalhes.",
+      "peso": 0.56,
       "tags": [
         "Verdade"
       ],
@@ -172,6 +191,7 @@
       "id": "s1",
       "titulo": "Sacanagem",
       "texto": "Selinho! E um beijo beem demorado.",
+      "peso": -0.65,
       "tags": [
         "Sacanagem"
       ],
@@ -181,6 +201,7 @@
       "id": "s2",
       "titulo": "Sacanagem",
       "texto": "Amasso longo.",
+      "peso": -0.53,
       "tags": [
         "Sacanagem"
       ],
@@ -190,6 +211,7 @@
       "id": "s3",
       "titulo": "Sacanagem",
       "texto": "Lambidinhas e mordidinhas na orelha.",
+      "peso": -0.46,
       "tags": [
         "Sacanagem"
       ],
@@ -199,6 +221,7 @@
       "id": "s4",
       "titulo": "Sacanagem",
       "texto": "Carícias em todo o tórax e barriga.",
+      "peso": -0.34,
       "tags": [
         "Sacanagem"
       ],
@@ -208,6 +231,7 @@
       "id": "s5",
       "titulo": "Sacanagem",
       "texto": "Chupões na nuca.",
+      "peso": -0.4,
       "tags": [
         "Sacanagem"
       ],
@@ -217,6 +241,7 @@
       "id": "s6",
       "titulo": "Sacanagem",
       "texto": "Beijos na virilha.",
+      "peso": 0.15,
       "tags": [
         "Sacanagem"
       ],
@@ -226,6 +251,7 @@
       "id": "s7",
       "titulo": "Sacanagem",
       "texto": "Escolha um lugar e massageie sem pudores.",
+      "peso": -0.15,
       "tags": [
         "Sacanagem"
       ],
@@ -235,6 +261,7 @@
       "id": "s8",
       "titulo": "Sacanagem",
       "texto": "Beije com vontade a parte do corpo do seu amor que você mais gosta.",
+      "peso": -0.22,
       "tags": [
         "Sacanagem"
       ],
@@ -244,6 +271,7 @@
       "id": "s9",
       "titulo": "Sacanagem",
       "texto": "Beijos carinhosos nas partes íntimas.",
+      "peso": 0.28,
       "tags": [
         "Sacanagem"
       ],
@@ -253,6 +281,7 @@
       "id": "s10",
       "titulo": "Sacanagem",
       "texto": "Strip!",
+      "peso": 0.22,
       "tags": [
         "Sacanagem"
       ],
@@ -262,6 +291,7 @@
       "id": "s11",
       "titulo": "Sacanagem",
       "texto": "Masturbe-o(a).",
+      "peso": 0.34,
       "tempo": 20,
       "tags": [
         "Sacanagem"
@@ -272,6 +302,7 @@
       "id": "s12",
       "titulo": "Sacanagem",
       "texto": "Faça com que ele implore(a) para fazer amor.",
+      "peso": 0.4,
       "tags": [
         "Sacanagem"
       ],
@@ -281,6 +312,7 @@
       "id": "s13",
       "titulo": "Sacanagem",
       "texto": "Faça um oral e só pare se ele(a) pedir.",
+      "peso": 0.46,
       "tags": [
         "Sacanagem"
       ],
@@ -290,6 +322,7 @@
       "id": "s14",
       "titulo": "Sacanagem",
       "texto": "Rapidinha!",
+      "peso": 0.65,
       "tempo": 90,
       "tags": [
         "Sacanagem"
@@ -300,6 +333,7 @@
       "id": "s15",
       "titulo": "Sacanagem",
       "texto": "Escolha um lugar inusitado para fazer amor agora.",
+      "peso": 0.59,
       "tags": [
         "Sacanagem"
       ],
@@ -309,6 +343,7 @@
       "id": "s16",
       "titulo": "Sacanagem",
       "texto": "Escolha: Masturbá-lo(a) ou assistir ele(a) masturbando-se?",
+      "peso": 0.09,
       "tempo": 20,
       "tags": [
         "Sacanagem"
@@ -319,6 +354,7 @@
       "id": "s17",
       "titulo": "Sacanagem",
       "texto": "Escolha: Oral em você ou nele(a)?",
+      "peso": 0.03,
       "tempo": 30,
       "tags": [
         "Sacanagem"
@@ -329,6 +365,7 @@
       "id": "s18",
       "titulo": "Sacanagem",
       "texto": "Escolha: amasso com ou sem roupa?",
+      "peso": -0.59,
       "tags": [
         "Sacanagem"
       ],
@@ -338,6 +375,7 @@
       "id": "s19",
       "titulo": "Sacanagem",
       "texto": "Escolha: Sexo oral ou Masturbação a dois?",
+      "peso": -0.03,
       "tempo": 60,
       "tags": [
         "Sacanagem"
@@ -348,6 +386,7 @@
       "id": "s20",
       "titulo": "Sacanagem",
       "texto": "Escolha: Na cama ou no chuveiro?",
+      "peso": -0.28,
       "tags": [
         "Sacanagem"
       ],
@@ -357,6 +396,7 @@
       "id": "s21",
       "titulo": "Sacanagem",
       "texto": "Sacanagem: “Papai e mamãe” ou “De quatro”?",
+      "peso": -0.09,
       "tags": [
         "Sacanagem"
       ],
@@ -366,6 +406,7 @@
       "id": "s22",
       "titulo": "Sacanagem",
       "texto": "69",
+      "peso": 0.53,
       "tempo": 69,
       "tags": [
         "Sacanagem"
