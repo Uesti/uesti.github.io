@@ -1,0 +1,213 @@
+/* ---------- carta ---------- */
+
+.carta {
+  perspective: 1400px;
+  /* "translate" e uma propriedade separada de "transform": assim o levantar do
+     hover nao entra na mesma interpolacao da rotacao (misturar translate com
+     rotate3d gera aquele deslize torto no meio da virada). */
+  transition: translate 0.18s ease;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.carta[aria-disabled="true"] { cursor: default; }
+
+.altura-fixa .grade .carta { height: var(--altura-carta); }
+.altura-auto .grade .carta { min-height: var(--altura-carta); }
+
+.carta:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 4px;
+  border-radius: var(--raio-borda);
+}
+
+.carta-interna {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: transform var(--duracao-flip) var(--curva-flip);
+}
+
+.carta:hover { translate: 0 -4px; }
+.carta[aria-disabled="true"]:hover { translate: none; }
+
+.carta.virada .carta-interna {
+  transform: rotate3d(var(--eixo-x), var(--eixo-y), 0, 180deg);
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  /* Rede de seguranca para onde o backface-visibility falha: a face que SAI e
+     escondida no meio da virada, com a carta de perfil. Ja a face que ENTRA
+     aparece na hora (o backface a mantem invisivel na primeira metade). Assim,
+     se a transicao nao rodar - o relogio de animacao fica pausado quando a aba
+     esta em segundo plano - a carta continua certa em vez de ficar sem face
+     nenhuma. Depender da transicao para revelar a face daria carta em branco. */
+  transition: visibility 0s linear calc(var(--duracao-flip) / 2);
+}
+
+.carta:not(.virada) .face-frente,
+.carta.virada .face-verso {
+  visibility: hidden;
+}
+
+.carta.virada .face-frente,
+.carta:not(.virada) .face-verso {
+  transition-delay: 0s;
+}
+
+/* no modo de altura automatica e a frente que define a altura da carta */
+.altura-auto .face-frente {
+  position: relative;
+  inset: auto;
+}
+
+.face-verso {
+  background: var(--verso-fundo);
+  background-size: cover;
+  background-position: center;
+  color: var(--verso-cor-texto);
+  border: var(--verso-borda);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px;
+}
+
+.face-frente {
+  background: var(--frente-fundo);
+  background-size: cover;
+  background-position: center;
+  color: var(--frente-cor-texto);
+  border: var(--frente-borda);
+  text-align: var(--frente-alinhamento);
+  transform: rotate3d(var(--eixo-x), var(--eixo-y), 0, 180deg);
+}
+
+/* padrao decorativo opcional do verso */
+.face-verso.com-padrao::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border-radius: calc(var(--raio-borda) - 8px);
+  border: 1px solid currentColor;
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.face-verso.com-padrao::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(45deg, currentColor 0 1px, transparent 1px 11px),
+    repeating-linear-gradient(-45deg, currentColor 0 1px, transparent 1px 11px);
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+.verso-icone {
+  font-size: 2.6rem;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.verso-texto {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  position: relative;
+  z-index: 1;
+}
+
+.frente-imagem {
+  display: block;
+  width: 100%;
+  height: 130px;
+  flex: none;
+  object-fit: cover;
+}
+
+/* ---------- conteudo da frente ---------- */
+
+.frente-conteudo {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: var(--frente-vertical, flex-start);
+  gap: 10px;
+}
+
+.frente-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.frente-texto {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+.frente-texto p { margin: 0 0 0.7em; }
+.frente-texto p:last-child { margin-bottom: 0; }
+
+.frente-texto code {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 0.88em;
+  padding: 1px 5px;
+  border-radius: 5px;
+  background: color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.frente-texto a { color: inherit; text-underline-offset: 3px; }
+
+/* display:block + inline-block faz as tags seguirem o alinhamento da frente */
+.frente-tags {
+  display: block;
+  margin: 0 -3px;
+}
+
+.tag {
+  display: inline-block;
+  margin: 3px;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.frente-rodape {
+  margin-top: var(--frente-empurra, auto);
+  padding-top: 10px;
+  font-size: 0.8rem;
+  opacity: 0.62;
+}

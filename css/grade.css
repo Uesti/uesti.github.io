@@ -1,0 +1,12 @@
+/* ---------- grade ---------- */
+
+.grade {
+  display: grid;
+  gap: var(--espacamento);
+  grid-template-columns: repeat(auto-fill, minmax(var(--largura-carta), 1fr));
+  align-items: start;
+}
+
+.grade.colunas-fixas {
+  grid-template-columns: repeat(var(--colunas), minmax(0, 1fr));
+}

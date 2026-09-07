@@ -1,0 +1,14 @@
+/* ---------- seletor de baralhos ---------- */
+
+.decks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.decks .botao {
+  padding: 9px 20px;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,23 @@
+/* ---------- aviso / erro ---------- */
+
+.aviso {
+  margin-top: 26px;
+  padding: 20px 22px;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--cor-destaque) 45%, transparent);
+  background: color-mix(in srgb, var(--cor-destaque) 10%, transparent);
+  line-height: 1.65;
+  font-size: 0.94rem;
+}
+
+.aviso h2 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.aviso code {
+  font-family: ui-monospace, Consolas, monospace;
+  background: color-mix(in srgb, var(--cor-texto) 12%, transparent);
+  padding: 2px 6px;
+  border-radius: 5px;
+}

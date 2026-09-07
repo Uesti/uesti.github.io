@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Cartas viradas - base do estilo.
+   Quase tudo aqui e controlado pelas variaveis abaixo, que os arquivos de
+   js/ preenchem a partir do "config.tema" do arquivo cartas.json.
+   Os valores escritos aqui sao apenas o fallback (caso o JSON nao defina).
+
+   O estilo esta dividido por parte da tela; a ordem dos <link> no index.html
+   e a ordem em que as regras valem.
+   ========================================================================== */
+
+:root {
+  /* tema */
+  --fundo-pagina: #12121a;
+  --cor-texto: #ecebf5;
+  --cor-texto-suave: #a09fb3;
+  --cor-destaque: #f5c542;
+  --fonte-titulo: Georgia, "Times New Roman", serif;
+  --fonte-texto: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --raio-borda: 18px;
+  --sombra: 0 14px 34px rgba(0, 0, 0, 0.38);
+
+  /* grade */
+  --largura-carta: 240px;
+  --altura-carta: 320px;
+  --espacamento: 20px;
+  --colunas: 4;
+
+  /* animacao */
+  --duracao-flip: 600ms;
+  /* Precisa ser simetrica: a troca de faces acontece em metade da duracao,
+     entao a carta tem que estar exatamente de perfil nesse instante.
+     Curvas com overshoot (y > 1) tambem passam de 180 graus e piscam. */
+  --curva-flip: cubic-bezier(0.42, 0, 0.58, 1);
+  --eixo-x: 0;
+  --eixo-y: 1;
+
+  /* verso (lado virado para baixo) */
+  --verso-fundo: linear-gradient(145deg, #2b2b5e 0%, #1b1b3a 100%);
+  --verso-cor-texto: #ffffff;
+  --verso-borda: 1px solid rgba(255, 255, 255, 0.14);
+
+  /* frente (lado revelado) */
+  --frente-fundo: #ffffff;
+  --frente-cor-texto: #1a1a24;
+  --frente-borda: 1px solid rgba(0, 0, 0, 0.08);
+  --frente-alinhamento: left;
+}
+
+* { box-sizing: border-box; }
+
+/* seletores de classe com "display" vencem o [hidden] do navegador;
+   esta regra garante que esconder um elemento sempre funcione */
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 40px 20px 64px;
+  background: var(--fundo-pagina);
+  background-repeat: no-repeat;
+  color: var(--cor-texto);
+  font-family: var(--fonte-texto);
+  -webkit-font-smoothing: antialiased;
+}
+
+.pagina {
+  max-width: 1200px;
+  margin: 0 auto;
+}

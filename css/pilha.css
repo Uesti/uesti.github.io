@@ -1,0 +1,112 @@
+/* ---------- pilha (baralho + descarte) ---------- */
+
+.pilha {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(24px, 6vw, 64px);
+  padding-top: 8px;
+}
+
+.pilha-coluna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.pilha-slot {
+  position: relative;
+  width: var(--largura-carta);
+  max-width: 100%;
+}
+
+.altura-fixa .pilha-slot { height: var(--altura-carta); }
+.altura-auto .pilha-slot { min-height: var(--altura-carta); }
+
+/* contorno tracejado do lugar da carta na mesa */
+.pilha-slot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px dashed color-mix(in srgb, var(--cor-texto) 16%, transparent);
+  border-radius: var(--raio-borda);
+  pointer-events: none;
+}
+
+/* cartas empilhadas: a de cima fica no fluxo, as de baixo por tras dela */
+.pilha-slot .carta {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  transform: translate(var(--px, 0px), var(--py, 0px)) rotate(var(--pr, 0deg)) scale(var(--ps, 1));
+  transition: transform 0.32s cubic-bezier(0.2, 0.8, 0.3, 1), translate 0.18s ease;
+}
+
+.pilha-slot .carta.topo {
+  position: relative;
+  inset: auto;
+}
+
+.altura-fixa .pilha-slot .carta.topo { height: 100%; }
+.altura-auto .pilha-slot .carta { height: 100%; }
+.altura-auto .pilha-slot .carta.topo { height: auto; }
+
+/* so a carta do topo do baralho responde ao mouse */
+.pilha-slot .carta:not(.topo) { pointer-events: none; }
+#descarte .carta { pointer-events: none; }
+
+/* descarte sem monte visivel: a carta sai voando.
+   Fica fora do fluxo para nao empurrar a proxima carta do baralho. */
+.pilha-slot .carta.saindo {
+  position: absolute;
+  inset: 0;
+  height: auto;
+  z-index: 99;
+  pointer-events: none;
+  animation: sair 340ms cubic-bezier(0.4, 0, 0.8, 0.4) forwards;
+}
+
+@keyframes sair {
+  from {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(65%, -22%) rotate(11deg) scale(0.92);
+    opacity: 0;
+  }
+}
+
+.pilha-vazia {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  color: var(--cor-texto-suave);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.pilha-rotulo {
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-texto-suave);
+  margin-top: 12px;
+}
+
+.botao:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.botao:disabled:hover {
+  background: color-mix(in srgb, var(--cor-texto) 7%, transparent);
+  border-color: color-mix(in srgb, var(--cor-texto) 22%, transparent);
+}

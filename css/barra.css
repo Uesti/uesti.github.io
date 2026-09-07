@@ -1,0 +1,85 @@
+/* ---------- barra de acoes e filtros ---------- */
+
+/* Os tres grupos ficam centralizados juntos, acompanhando a fila de baralhos
+   logo acima. Empurrar as acoes para a borda com margin-left:auto abria um vao
+   enorme no meio em telas largas. */
+.barra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 14px;
+  margin-bottom: 26px;
+}
+
+.filtros,
+.acoes,
+.acoes-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* O contador e os botoes ficam na propria linha, abaixo do modo e dos filtros:
+   base de 100% sempre quebra a linha num flex com wrap. */
+.acoes { flex-basis: 100%; }
+
+.botao {
+  font: inherit;
+  font-size: 0.86rem;
+  padding: 8px 15px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--cor-texto) 22%, transparent);
+  background: color-mix(in srgb, var(--cor-texto) 7%, transparent);
+  color: var(--cor-texto);
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s, transform 0.12s;
+}
+
+.botao:hover {
+  background: color-mix(in srgb, var(--cor-destaque) 20%, transparent);
+  border-color: var(--cor-destaque);
+}
+
+.botao:active { transform: translateY(1px); }
+
+.botao.ativo {
+  background: var(--cor-destaque);
+  border-color: var(--cor-destaque);
+  color: #14141c;
+  font-weight: 600;
+}
+
+.seletor-modo {
+  display: inline-flex;
+  gap: 3px;
+  padding: 3px;
+  margin-right: 10px;   /* separa do grupo de filtros ao lado */
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--cor-texto) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--cor-texto) 14%, transparent);
+}
+
+.seletor-modo .botao {
+  border: 0;
+  background: none;
+  padding: 6px 15px;
+}
+
+.seletor-modo .botao:hover {
+  background: color-mix(in srgb, var(--cor-texto) 10%, transparent);
+}
+
+.seletor-modo .botao.ativo,
+.seletor-modo .botao.ativo:hover {
+  background: var(--cor-destaque);
+  color: #14141c;
+}
+
+.contador {
+  font-size: 0.86rem;
+  color: var(--cor-texto-suave);
+  margin-right: 4px;
+}

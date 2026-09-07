@@ -4,7 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cartas</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- a ordem dos arquivos e a ordem em que as regras valem -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cabecalho.css">
+  <link rel="stylesheet" href="css/barra.css">
+  <link rel="stylesheet" href="css/decks.css">
+  <link rel="stylesheet" href="css/cronometro.css">
+  <link rel="stylesheet" href="css/grade.css">
+  <link rel="stylesheet" href="css/pilha.css">
+  <link rel="stylesheet" href="css/carta.css">
+  <link rel="stylesheet" href="css/aviso.css">
+  <link rel="stylesheet" href="css/responsivo.css">
 </head>
 <body>
   <div class="pagina">
@@ -52,8 +62,25 @@
 
     <div class="aviso" id="aviso" hidden></div>
 
+    <!-- Modulos nao carregam por file://, entao o aviso de erro do js/ nunca
+         apareceria no duplo clique. Este bloco cobre esse caso. -->
+    <div class="aviso" id="aviso-arquivo" hidden>
+      <h2>Abra a página por um servidor local</h2>
+      <p>O navegador bloqueia a leitura dos arquivos quando a página é aberta
+        com duplo clique (<code>file://</code>). Abra um terminal nesta pasta e rode:</p>
+      <p><code>python -m http.server 8000</code></p>
+      <p>Depois acesse <code>http://localhost:8000</code>.</p>
+    </div>
+
   </div>
 
-  <script src="script.js"></script>
+  <!-- script classico de proposito: precisa rodar mesmo sem os modulos -->
+  <script>
+    if (location.protocol === 'file:') {
+      document.getElementById('aviso-arquivo').hidden = false;
+    }
+  </script>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

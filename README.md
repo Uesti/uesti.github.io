@@ -25,8 +25,36 @@ Com vários baralhos em arquivos separados, o servidor local é necessário.)
 | `cartas.json` | **Índice.** Lista os baralhos e guarda a configuração que vale para todos eles. |
 | `decks/*.json` | **Um arquivo por baralho**, com as cartas e os ajustes só daquele baralho. |
 | `index.html` | Esqueleto da página. Raramente precisa mudar. |
-| `style.css` | Estilo base. Só mexa se quiser algo além das opções do JSON. |
-| `script.js` | Lê os arquivos e monta as cartas. |
+| `css/` | Estilo base, um arquivo por parte da tela. Só mexa se quiser algo além das opções do JSON. |
+| `js/` | Código, um arquivo por assunto. Lê os arquivos e monta as cartas. |
+
+### O que tem em `js/`
+
+O ponto de entrada é o `js/main.js` — é ele que o `index.html` carrega. Os
+outros arquivos são importados a partir dele:
+
+| Arquivo | Para que serve |
+| --- | --- |
+| `main.js` | Lê o `cartas.json` e liga os botões da barra. |
+| `padroes.js` | Valores usados quando a chave não existe no JSON. |
+| `elementos.js` | Os elementos do `index.html` em um lugar só. |
+| `estado.js` | O que os módulos compartilham (config, cartas, monte, descarte). |
+| `utilidades.js` | Mesclar configurações, desligar animações, formatar texto. |
+| `embaralhar.js` | Embaralhamento com peso por tag e por carta. |
+| `armazenamento.js` | Memória do que já foi revelado (`lembrarEstado`). |
+| `tema.js` | Passa o `config.tema` para as variáveis do CSS. |
+| `carta.js` | Monta cada carta, vira e trata o clique. |
+| `cronometro.js` | O tempo das cartas que trazem `tempo`. |
+| `pilha.js` | Modo pilha: baralho, descarte, descartar e voltar. |
+| `barra.js` | Contador, filtros e reiniciar. |
+| `modos.js` | Troca entre "grade" e "pilha". |
+| `decks.js` | Índice dos baralhos e troca de baralho. |
+| `render.js` | Desenha um baralho na tela. |
+| `aviso.js` | Mensagem de erro quando o JSON não pode ser lido. |
+
+O `css/` segue a mesma ideia (uma parte da tela por arquivo). A ordem dos
+`<link>` no `index.html` é a ordem em que as regras valem — se for dividir mais,
+mantenha a ordem.
 
 Baralhos que já vêm prontos:
 

@@ -1,0 +1,52 @@
+/* ---------- cronometro da carta ---------- */
+
+.frente-tempo {
+  margin-top: var(--frente-empurra, auto);
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.tempo-valor {
+  font-variant-numeric: tabular-nums;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.tempo-valor.correndo { opacity: 1; }
+
+.tempo-valor.acabou {
+  font-size: 1.2rem;
+  opacity: 1;
+  color: #c62b45;
+  animation: pulsar 1s ease-in-out infinite;
+}
+
+/* o botao herda a cor da frente da carta, nao a do tema da pagina */
+.tempo-botao {
+  font-size: 0.78rem;
+  padding: 6px 16px;
+  color: inherit;
+  border-color: color-mix(in srgb, currentColor 30%, transparent);
+  background: color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.tempo-botao:hover {
+  background: color-mix(in srgb, currentColor 16%, transparent);
+  border-color: color-mix(in srgb, currentColor 45%, transparent);
+}
+
+.tempo-botao.rodando {
+  background: color-mix(in srgb, currentColor 18%, transparent);
+  border-color: color-mix(in srgb, currentColor 45%, transparent);
+}
+
+@keyframes pulsar {
+  50% { opacity: 0.4; }
+}
