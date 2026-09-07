@@ -88,23 +88,31 @@ body {
 
 /* ---------- barra de acoes e filtros ---------- */
 
+/* Os tres grupos ficam centralizados juntos, acompanhando a fila de baralhos
+   logo acima. Empurrar as acoes para a borda com margin-left:auto abria um vao
+   enorme no meio em telas largas. */
 .barra {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 10px 14px;
   margin-bottom: 26px;
 }
 
 .filtros,
-.acoes {
+.acoes,
+.acoes-botoes {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
-.acoes { margin-left: auto; }
+/* O contador e os botoes ficam na propria linha, abaixo do modo e dos filtros:
+   base de 100% sempre quebra a linha num flex com wrap. */
+.acoes { flex-basis: 100%; }
 
 .botao {
   font: inherit;
@@ -597,10 +605,170 @@ body {
 
 /* ---------- responsivo / acessibilidade ---------- */
 
+/* ---------- celular ----------
+   O objetivo aqui e caber tudo em uma tela: os controles encolhem para sobrar
+   altura para a carta e para o botao do cronometro, que sao o que voce usa. */
+
 @media (max-width: 560px) {
-  body { padding: 24px 14px 48px; }
-  .grade.colunas-fixas { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
-  .acoes { margin-left: 0; }
+  body {
+    padding: 14px 12px 28px;
+    min-height: 100vh;
+    min-height: 100svh;    /* svh nao conta a barra do navegador */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pagina {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cabecalho { margin-bottom: 14px; }
+
+  .cabecalho h1 {
+    font-size: clamp(1.4rem, 7vw, 2rem);
+    margin-bottom: 4px;
+  }
+
+  .cabecalho p {
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
+
+  .botao {
+    padding: 7px 13px;
+    font-size: 0.8rem;
+  }
+
+  .decks {
+    gap: 6px;
+    margin-bottom: 17px;
+  }
+
+  .decks .botao {
+    padding: 7px 14px;
+    font-size: 0.83rem;
+  }
+
+  /* Uma linha por grupo, e os botoes em colunas de mesma largura em vez de
+     quebrarem tortos. As colunas se dividem sozinhas entre os botoes visiveis,
+     entao mudar de modo (que troca quais botoes aparecem) continua alinhado. */
+  .barra {
+    flex-direction: column;
+    flex-wrap: nowrap;   /* com "wrap", um flex column reparte altura extra entre os grupos */
+    align-items: stretch;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .seletor-modo {
+    align-self: center;
+    margin-right: 0;
+    padding: 2px;
+  }
+
+  .filtros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(74px, 1fr));
+    gap: 6px;
+  }
+
+  .acoes {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-basis: auto;   /* numa coluna, flex-basis seria altura */
+    gap: 8px;
+  }
+
+  .acoes-botoes {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 6px;
+  }
+
+  .filtros .botao,
+  .acoes-botoes .botao {
+    padding: 8px 6px;
+    text-align: center;
+  }
+
+  .seletor-modo .botao { padding: 5px 13px; }
+
+  .contador {
+    font-size: 0.78rem;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  /* No celular a Tabela vira duas colunas: com a largura cheia do baralho
+     caberia uma carta por linha, e ai o modo perde a graca de ver varias. */
+  .grade,
+  .grade.colunas-fixas {
+    gap: 12px;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .altura-fixa .grade .carta { height: min(var(--altura-carta), 260px); }
+  .grade .frente-conteudo { padding: 12px; }
+  .grade .frente-texto { font-size: 0.82rem; }
+  .grade .frente-titulo { font-size: 0.95rem; }
+  .grade .tempo-valor { font-size: 1.15rem; }
+  .grade .tempo-botao { padding: 5px 12px; font-size: 0.72rem; }
+  .grade .verso-icone { font-size: 2rem; }
+  .grade .verso-texto { font-size: 0.75rem; }
+
+  /* pilha: a carta ocupa a largura util e nunca estoura a altura da tela */
+  .pilha {
+    gap: 16px;
+    padding-top: 0;
+  }
+
+  /* as cartas de baixo da pilha descem alem do slot; o espaco extra evita
+     que elas encostem no rotulo */
+  .pilha-coluna { gap: 16px; }
+
+  /* 100% aqui resolveria contra a coluna flex, que encolhe ate o conteudo e
+     deixaria a carta virar uma tira. vw da uma largura definida de verdade. */
+  .pilha-slot { width: min(var(--largura-carta), calc(100vw - 32px)); }
+
+  /* A carta pega a altura que sobrar depois dos controles, em vez de um limite
+     fixo em vh: assim se ajusta sozinha a qualquer tela e a qualquer quantidade
+     de baralhos e filtros na barra. Nunca passa da altura pedida no JSON. */
+  .pilha {
+    flex: 1;
+    min-height: 0;
+    align-items: stretch;
+  }
+
+  .pilha-coluna {
+    flex: 1;
+    min-height: 0;
+    justify-content: center;   /* centraliza a carta na altura que sobrar */
+  }
+
+  .altura-fixa .pilha-slot,
+  .altura-auto .pilha-slot {
+    flex: 1;
+    height: auto;
+    min-height: 170px;
+    max-height: var(--altura-carta);
+  }
+
+  .pilha-rotulo { font-size: 0.72rem; }
+
+  .frente-conteudo {
+    padding: 16px;
+    gap: 8px;
+  }
+
+  .frente-titulo { font-size: 1.08rem; }
+  .frente-texto { font-size: 0.92rem; }
+  .frente-tempo { padding-top: 8px; }
+  .tempo-valor { font-size: 1.4rem; }
 }
 
 /* Enquanto o baralho e remontado, nada anima: o atraso da troca de faces
