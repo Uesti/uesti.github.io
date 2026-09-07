@@ -353,6 +353,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-texto-suave);
+  margin-top: 12px;
 }
 
 .botao:disabled {
@@ -669,10 +670,19 @@ body {
     padding: 2px;
   }
 
+  /* Quatro por linha, todos do mesmo tamanho, e cada linha centralizada.
+     Um grid deixaria a ultima linha incompleta encostada na esquerda; com flex
+     e largura fixa, a sobra se divide dos dois lados. */
   .filtros {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(74px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 6px;
+  }
+
+  .filtros .botao {
+    flex: 0 0 calc(25% - 4.5px);
+    min-width: 74px;
   }
 
   .acoes {
@@ -754,8 +764,14 @@ body {
   .altura-auto .pilha-slot {
     flex: 1;
     height: auto;
-    min-height: 170px;
-    max-height: var(--altura-carta);
+    min-height: 150px;
+    /* O teto vem da TELA, nao do espaco que sobrou: assim a carta tem o mesmo
+       tamanho em todos os baralhos, mesmo os que tem mais filtros e barra mais
+       alta. O 430px cobre cabecalho + baralhos + a barra mais cheia + rotulo.
+       O flex continua encolhendo caso algum baralho passe disso, entao nunca
+       estoura a tela - so fica menor que os outros nesse caso extremo. */
+    max-height: min(var(--altura-carta), calc(100vh - 430px));
+    max-height: min(var(--altura-carta), calc(100svh - 430px));
   }
 
   .pilha-rotulo { font-size: 0.72rem; }
