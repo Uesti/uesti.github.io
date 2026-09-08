@@ -40,7 +40,7 @@ outros arquivos são importados a partir dele:
 | `elementos.js` | Os elementos do `index.html` em um lugar só. |
 | `estado.js` | O que os módulos compartilham (config, cartas, monte, descarte). |
 | `utilidades.js` | Mesclar configurações, desligar animações, formatar texto. |
-| `embaralhar.js` | Embaralhamento com peso por tag e por carta. |
+| `embaralhar.js` | Embaralhamento com peso por tag e por carta. Testado por [`tools/testar-embaralhamento.mjs`](#bateria-de-testes-do-embaralhamento). |
 | `armazenamento.js` | Memória do que já foi revelado (`lembrarEstado`). |
 | `tema.js` | Passa o `config.tema` para as variáveis do CSS. |
 | `carta.js` | Monta cada carta, vira e trata o clique. |
@@ -387,24 +387,118 @@ fim) e o `peso` da carta ajusta a ordem *dentro* dessa faixa.
 Essa carta fica em `0.8 - 0.3 = 0.5`: continua no grupo dos intensos, mas tende a
 sair antes dos outros intensos.
 
-Como escolher a escala: se as faixas das tags estão separadas por `1`, use algo
-em torno de `±0.35` nas cartas para só ordenar por dentro. Valores maiores tiram
-a carta da faixa da tag de propósito. Quem usa só um dos dois não muda nada — o
+Como escolher a escala: os dois níveis competem, então o que importa é a razão
+entre eles. Se o vão entre as tags for muito maior que a faixa dos pesos das
+cartas, a tag decide sozinha e a carta vira detalhe — o baralho sai agrupado por
+categoria. Uma boa regra é manter o vão total das tags **na mesma ordem de
+grandeza** da faixa dos pesos das cartas. Os três baralhos daqui usam pesos de
+carta entre `-0.20` e `+0.24` e vãos de tag entre `0.36` e `0.80`. Para conferir
+o efeito de qualquer escolha, use
+[a bateria de testes](#bateria-de-testes-do-embaralhamento). Quem usa só um dos dois não muda nada — o
 outro entra como zero. Se a carta tiver mais de uma tag com peso, vale a primeira.
 
 É assim que o baralho de Cartas Eróticas funciona:
 
 ```json
-"pesosPorTag": { "30 sec": -1, "40 sec": 0, "90 sec": 1 }
+"pesosPorTag": { "30 sec": -0.4, "40 sec": 0, "90 sec": 0.4 }
 ```
 
-com cada carta trazendo um ajuste de `±0.35` vindo da posição dela no PDF
-original. Resultado medido em 5000 embaralhamentos: as de 30s ficam entre as
-posições 4,5 e 8,9; as de 40s entre 12,4 e 17,1; as de 90s entre 21,3 e 22,2 — e
-dentro de cada faixa a ordem do PDF é respeitada, em média.
+com cada carta trazendo um ajuste entre `-0.18` e `+0.24`, vindo da intensidade
+da proposta. Resultado medido em 6000 embaralhamentos: as de 30s caem na posição
+9,9 em média; as de 40s em 15,3; as de 90s em 20,4 — e dentro de cada faixa a
+ordem por intensidade é respeitada, em média.
+
+As faixas se sobrepõem de propósito. Uma carta de 90s aparece a partir da
+posição 11 em 10% das partidas, então o fim do baralho não é um bloco fechado.
 
 Sem virar regra fixa: cada faixa já apareceu em quase toda posição do baralho, e
-em **28% das partidas** alguma carta de 30s sai depois de alguma de 90s.
+em **92% das partidas** alguma carta de 30s sai depois da primeira de 90s.
+
+## Bateria de testes do embaralhamento
+
+`tools/testar-embaralhamento.mjs` embaralha muitas vezes e mostra onde cada carta
+costuma cair. Ele **importa o `js/embaralhar.js` de verdade** e monta a `config`
+na mesma ordem que o site monta, então não existe cópia do algoritmo para sair de
+sincronia.
+
+Sem nenhum argumento já mostra tudo, nos três baralhos:
+
+```bash
+node tools/testar-embaralhamento.mjs
+```
+
+São só cinco opções, e o próprio programa lembra delas no fim de cada execução:
+
+| Opção | O que faz |
+| --- | --- |
+| `--deck=<id>` | Só um baralho. |
+| `--n=<int>` | Quantas vezes embaralhar (padrão `5000`). |
+| `--filtro=<tag>` | Simula o filtro do jogo: só as cartas daquela tag. |
+| `--tags=<lista>` | Testa outros `pesosPorTag` **sem editar o JSON**, no formato `nome:valor,nome:valor`. |
+| `--csv=<arquivo>` | Grava a tabela em CSV, com a contagem de cada posição. |
+
+Nome de tag com espaço precisa de aspas no argumento inteiro, senão o shell
+quebra em pedaços — o script avisa quando isso acontece:
+
+```bash
+node tools/testar-embaralhamento.mjs --deck=eroticas --tags="30 sec:-0.4,40 sec:0,90 sec:0.4"
+```
+
+### A tabela
+
+Uma linha por carta, ordenada pela posição média. A barra à direita é a
+distribuição inteira: **uma coluna por posição da pilha**.
+
+```
+                                                                        1   5    10   15   20   25
+  id    carta                       peso    tag  total  média  mediana     moda  p10-p90  |   |    |    |    |    |
+  2     Simule penetração com…     -0.18  -0.40  -0.58    8.8        7  1 · 10%     2-19  █▇▇▆▆▅▅▅▄▄▄▄▄▃▃▃▂▂▂▂▂▂▁▁▁▁▁
+  30    Finalizem com orgasmo…     +0.24  +0.00  +0.24   17.1       18   24 · 6%     7-26  ▂▂▃▃▃▃▄▄▄▄▅▅▅▅▅▆▆▇▇█▇███▇█▇
+  21    Escolha uma posição d…     +0.19  +0.40  +0.59   20.4       22  27 · 13%    11-27  ▁▁▁▁▁▁▁▁▁▁▂▂▂▂▂▃▃▃▃▄▄▄▅▅▆▇█
+```
+
+| Coluna | O que é |
+| --- | --- |
+| `peso` / `tag` / `total` | O peso escrito na carta, o da tag dela, e a soma — é o `total` que empurra o sorteio. |
+| `média` | Posição média ao longo de todas as partidas. |
+| `mediana` | A posição do meio: metade das partidas cai antes dela, metade depois. |
+| `moda · %` | A posição em que a carta mais caiu, e quanto ela vale. Se a `%` é baixa, a distribuição é achatada e a moda quer dizer pouco. |
+| `p10-p90` | Entre essas duas posições ficam 80% das partidas. |
+| barra | A distribuição, uma coluna por posição, normalizada pelo próprio pico — mostra o **formato**, não a altura. |
+
+Comparar as três medidas de centro diz bastante: quando `média`, `mediana` e
+`moda` ficam próximas, a distribuição é simétrica; quando a `moda` foge para uma
+ponta, a carta encosta no começo ou no fim do baralho e a cauda puxa a média para
+o outro lado.
+
+Logo abaixo vem a mesma tabela **somada por faixa de tag**, e depois as métricas.
+
+### O que as métricas querem dizer
+
+| Métrica | Leitura |
+| --- | --- |
+| **Sobreposição entre faixas vizinhas** | `0%` = as faixas viram blocos fechados e o baralho sai ordenado por tag. Acima de `50%` há mistura de verdade. |
+| **Vizinhos com a mesma tag** | Quantas cartas seguidas compartilham tag. Comparado com o sorteio puro na mesma linha: muito acima dele, o baralho sai agrupado. |
+| **Amplitude típica de uma carta** | Quantas posições uma carta percorre entre uma partida e outra (p10 a p90). |
+| **Imprevisibilidade entre partidas** | `1,00` = tão variado quanto sorteio puro, `0` = a pilha é sempre a mesma. |
+| **Intensidade manda na posição?** | Correlação entre o `peso` da carta e onde ela cai. `1,00` = só o peso da carta decide; perto de `0` = a tag decide e cartas parecidas caem longe uma da outra. |
+| **...dentro de cada faixa** | A mesma correlação medida por faixa, onde a tag é constante. É a que vale quando os pesos foram calibrados por faixa em vez de numa régua única — caso de *Verdade ou Sacanagem*, onde cada lado foi centrado no próprio zero. |
+
+Fecha com um **veredito** em texto e, quando há problema, o **pior par**: duas
+cartas de intensidade quase igual que caem longe uma da outra por causa da tag.
+
+### O CSV
+
+`--csv=<arquivo>` grava uma linha por carta (dos três baralhos, se você não
+filtrar), com `baralho`, `id`, texto, tag, os três pesos, `media`, `mediana`,
+`moda`, `moda_pct`, `desvio`, `p10`, `p90`, a porcentagem de vezes que a carta
+cai nas 5 primeiras e nas 5 últimas, e as colunas `pos_1`…`pos_N` com a contagem
+bruta de cada posição. Cada linha soma exatamente o `--n` usado. O arquivo sai
+com BOM, então o Excel no Windows abre os acentos certos.
+
+```bash
+node tools/testar-embaralhamento.mjs --n=20000 --csv=posicoes.csv
+```
 
 ## Receitas rápidas
 
@@ -518,7 +612,9 @@ a escolha do jogador, e "Misturar" sorteia das duas.
 "forcaDoPeso": 1.5
 ```
 
-com as cartas mais leves em `"peso": -1` e as mais intensas em `"peso": 1`.
+com as cartas mais leves em peso negativo e as mais intensas em positivo. Não
+precisa usar toda a escala: nos baralhos daqui, `±0.20` já separa bem, e pesos
+próximos entre cartas de intensidade parecida deixam a pilha mais variada.
 
 O baralho de Cartas Eróticas combina os dois níveis: a tag da duração define a
 faixa, e um ajuste pequeno em cada carta ordena por dentro dela. Veja
