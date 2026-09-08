@@ -57,6 +57,14 @@
 .pilha-slot .carta:not(.topo) { pointer-events: none; }
 #descarte .carta { pointer-events: none; }
 
+/* A sombra do tema e preta e bem espalhada (34px de desfoque). Nas cartas de
+   baixo ela fica quase toda escondida atras da face opaca da carta de cima -
+   so que pintada assim mesmo, uma por carta empilhada. Quando o hover levanta
+   a de cima, o navegador recompoe a pilha e essas sombras enterradas vazam por
+   um quadro como listras pretas. A borda da face ja separa as cartas na parte
+   que aparece, entao aqui a sombra so atrapalha. */
+.pilha-slot .carta:not(.topo) .face { box-shadow: none; }
+
 /* descarte sem monte visivel: a carta sai voando.
    Fica fora do fluxo para nao empurrar a proxima carta do baralho. */
 .pilha-slot .carta.saindo {

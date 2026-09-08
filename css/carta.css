@@ -116,9 +116,14 @@
   content: "";
   position: absolute;
   inset: 0;
+  /* As listras precisam de uma rampa de meio pixel em cada ponta. Com corte
+     seco em 1px, a diagonal vira um fio de exatamente um pixel: quando o hover
+     levanta a carta, o navegador redesenha essa camada fora da grade de pixels
+     e o fio bate contra ela, formando faixas escuras (moire). A rampa deixa o
+     proprio navegador suavizar a linha e o padrao para de cintilar. */
   background-image:
-    repeating-linear-gradient(45deg, currentColor 0 1px, transparent 1px 11px),
-    repeating-linear-gradient(-45deg, currentColor 0 1px, transparent 1px 11px);
+    repeating-linear-gradient(45deg, currentColor 0 0.5px, transparent 1.5px 11px),
+    repeating-linear-gradient(-45deg, currentColor 0 0.5px, transparent 1.5px 11px);
   opacity: 0.07;
   pointer-events: none;
 }
@@ -155,6 +160,17 @@
   min-height: 0;
   overflow: auto;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Cresce para ocupar a sobra de altura da carta, mas nunca encolhe abaixo do
+   proprio conteudo (por isso "1 0 auto"): assim o rodape fica no pe da carta
+   em qualquer alinhamento, e o texto que passa da altura ainda rola no
+   .frente-conteudo em vez de ser cortado. */
+.frente-corpo {
+  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: var(--frente-vertical, flex-start);
@@ -205,8 +221,8 @@
   background: color-mix(in srgb, currentColor 12%, transparent);
 }
 
+/* sem margem automatica: quem empurra o rodape para baixo e o .frente-corpo */
 .frente-rodape {
-  margin-top: var(--frente-empurra, auto);
   padding-top: 10px;
   font-size: 0.8rem;
   opacity: 0.62;

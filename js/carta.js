@@ -67,18 +67,24 @@ export function criarCarta(dados, indice) {
   const conteudo = document.createElement('div');
   conteudo.className = 'frente-conteudo';
 
+  /* O corpo come toda a sobra de altura, entao o rodape - que e irmao dele, e
+     nao filho - fica sempre colado no pe da carta. O alinhamentoVertical do
+     JSON vale dentro do corpo, sem arrastar o rodape junto. */
+  const corpo = document.createElement('div');
+  corpo.className = 'frente-corpo';
+
   if (dados.titulo) {
     const h = document.createElement('h2');
     h.className = 'frente-titulo';
     h.textContent = dados.titulo;
-    conteudo.appendChild(h);
+    corpo.appendChild(h);
   }
 
   if (dados.texto) {
     const p = document.createElement('div');
     p.className = 'frente-texto';
     p.innerHTML = formatarTexto(dados.texto, dados.html === true);
-    conteudo.appendChild(p);
+    corpo.appendChild(p);
   }
 
   if (Array.isArray(dados.tags) && dados.tags.length && config.mostrarTags) {
@@ -90,7 +96,7 @@ export function criarCarta(dados, indice) {
       tag.textContent = t;
       caixa.appendChild(tag);
     }
-    conteudo.appendChild(caixa);
+    corpo.appendChild(caixa);
   }
 
   if (dados.tempo && config.mostrarTempo) {
@@ -115,8 +121,10 @@ export function criarCarta(dados, indice) {
 
     caixa.appendChild(valor);
     caixa.appendChild(botao);
-    conteudo.appendChild(caixa);
+    corpo.appendChild(caixa);
   }
+
+  conteudo.appendChild(corpo);
 
   if (dados.rodape) {
     const rodape = document.createElement('div');

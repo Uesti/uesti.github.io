@@ -58,8 +58,9 @@ export function aplicarLadosPadrao(alvo, verso, frente) {
       const mapa = { top: 'flex-start', center: 'center', bottom: 'flex-end' };
       const v = mapa[frente.alinhamentoVertical] || 'flex-start';
       s.setProperty('--frente-vertical', v);
-      /* o rodape e o cronometro so empurram para baixo no alinhamento do topo;
-         no centro eles acompanham o grupo, senao "comem" o espaco livre */
+      /* o cronometro so desce sozinho no alinhamento do topo; no centro ele
+         acompanha o grupo, senao "come" o espaco livre e desfaz o centro.
+         (o rodape nao depende disso: ele fica fora do .frente-corpo) */
       s.setProperty('--frente-empurra', v === 'flex-start' ? 'auto' : '0px');
     }
   }

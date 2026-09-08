@@ -27,7 +27,8 @@
     "frente": {
       "fundo": "#fff8f4",
       "corTexto": "#3d1119",
-      "alinhamento": "center"
+      "alinhamento": "center",
+      "alinhamentoVertical": "center"
     },
     "pilha": {
       "textoFim": "Acabou o baralho",
@@ -289,6 +290,16 @@
       "peso": 1,
       "tempo": 40,
       "rodape": "Carta 30",
+      "tags": [
+        "40 sec"
+      ]
+    },
+    {
+      "id": "31",
+      "texto": "Pincele.",
+      "peso": 1,
+      "tempo": 40,
+      "rodape": "Carta 31",
       "tags": [
         "40 sec"
       ]

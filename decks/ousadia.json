@@ -67,7 +67,7 @@
     },
     {
       "id": "12",
-      "texto": "Tente fazer um espacate com apenas sutiã e calcinha. Se não conseguir, tire uma das peças.",
+      "texto": "Tire uma das peças de roupa.",
       "peso": -0.2,
       "rodape": "Carta 12",
       "tags": [
@@ -79,15 +79,6 @@
       "texto": "Toque suavemente o corpo do seu parceiro com o seu peito.",
       "peso": -0.14,
       "rodape": "Carta 13",
-      "tags": [
-        "Provocação"
-      ]
-    },
-    {
-      "id": "15",
-      "texto": "Até suas próximas três vezes, diga 'sexy' após cada frase.",
-      "peso": -0.27,
-      "rodape": "Carta 15",
       "tags": [
         "Provocação"
       ]
@@ -117,16 +108,6 @@
       "rodape": "Carta 19",
       "tags": [
         "Provocação"
-      ]
-    },
-    {
-      "id": "24",
-      "texto": "Beije/lambe a orelha do seu parceiro por 10 segundos.",
-      "peso": 0.02,
-      "tempo": 10,
-      "rodape": "Carta 24",
-      "tags": [
-        "Beijo"
       ]
     },
     {
@@ -182,15 +163,6 @@
       "rodape": "Carta 33",
       "tags": [
         "Despir"
-      ]
-    },
-    {
-      "id": "34",
-      "texto": "Imagine que você está fazendo um ensaio sensual. Faça sua pose.",
-      "peso": -0.21,
-      "rodape": "Carta 34",
-      "tags": [
-        "Provocação"
       ]
     },
     {
@@ -256,25 +228,6 @@
       "rodape": "Carta 44",
       "tags": [
         "Beijo"
-      ]
-    },
-    {
-      "id": "45",
-      "texto": "Faça 10 flexões com o seu parceiro embaixo de você e dê um beijo nele toda vez que descer.",
-      "peso": 0.07,
-      "rodape": "Carta 45",
-      "tags": [
-        "Beijo"
-      ]
-    },
-    {
-      "id": "46",
-      "texto": "Comporte-se como se fosse submisso a seu parceiro por 2 minutos.",
-      "peso": 0.0,
-      "tempo": 120,
-      "rodape": "Carta 46",
-      "tags": [
-        "Domínio"
       ]
     },
     {
@@ -415,15 +368,6 @@
       ]
     },
     {
-      "id": "66",
-      "texto": "Seja dominante sobre o seu parceiro.",
-      "peso": 0.15,
-      "rodape": "Carta 66",
-      "tags": [
-        "Domínio"
-      ]
-    },
-    {
       "id": "68",
       "texto": "De um beijo no seu parceiro e morda lentamente o lábio dele.",
       "peso": -0.07,
@@ -437,24 +381,6 @@
       "texto": "Lamba todas as partes do corpo do seu parceiro.",
       "peso": 0.25,
       "rodape": "Carta 69",
-      "tags": [
-        "Beijo"
-      ]
-    },
-    {
-      "id": "72",
-      "texto": "Coloque uma quantidade generosa de gloss labial com sabor e beije seu parceiro de forma intensa até que os lábios dele também fiquem cobertos. Agora, seu parceiro tem que adivinhar o sabor.",
-      "peso": -0.02,
-      "rodape": "Carta 72",
-      "tags": [
-        "Beijo"
-      ]
-    },
-    {
-      "id": "73",
-      "texto": "Esfregue o seu nariz de um lado para o outro contra o nariz do seu parceiro e depois dê um beijo francês.",
-      "peso": -0.16,
-      "rodape": "Carta 73",
       "tags": [
         "Beijo"
       ]

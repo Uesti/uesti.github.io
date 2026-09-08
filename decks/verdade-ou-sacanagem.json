@@ -248,16 +248,6 @@
       "rodape": "Sacanagem 6"
     },
     {
-      "id": "s7",
-      "titulo": "Sacanagem",
-      "texto": "Escolha um lugar e massageie sem pudores.",
-      "peso": -0.15,
-      "tags": [
-        "Sacanagem"
-      ],
-      "rodape": "Sacanagem 7"
-    },
-    {
       "id": "s8",
       "titulo": "Sacanagem",
       "texto": "Beije com vontade a parte do corpo do seu amor que você mais gosta.",
@@ -307,16 +297,6 @@
         "Sacanagem"
       ],
       "rodape": "Sacanagem 12"
-    },
-    {
-      "id": "s13",
-      "titulo": "Sacanagem",
-      "texto": "Faça um oral e só pare se ele(a) pedir.",
-      "peso": 0.46,
-      "tags": [
-        "Sacanagem"
-      ],
-      "rodape": "Sacanagem 13"
     },
     {
       "id": "s14",
@@ -383,16 +363,6 @@
       "rodape": "Sacanagem 19"
     },
     {
-      "id": "s20",
-      "titulo": "Sacanagem",
-      "texto": "Escolha: Na cama ou no chuveiro?",
-      "peso": -0.28,
-      "tags": [
-        "Sacanagem"
-      ],
-      "rodape": "Sacanagem 20"
-    },
-    {
       "id": "s21",
       "titulo": "Sacanagem",
       "texto": "Sacanagem: “Papai e mamãe” ou “De quatro”?",
@@ -412,6 +382,39 @@
         "Sacanagem"
       ],
       "rodape": "Sacanagem 22"
+    },
+    {
+      "id": "s23",
+      "titulo": "Sacanagem",
+      "texto": "Fique amarrado e vendado e deixe seu parceiro fazer o que quiser",
+      "peso": 0.53,
+      "tempo": 180,
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 23"
+    },
+    {
+      "id": "s24",
+      "titulo": "Sacanagem",
+      "texto": "Amarre seu parceiro e faça o que quiser",
+      "peso": 0.53,
+      "tempo": 120,
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 24"
+    },
+    {
+      "id": "s25",
+      "titulo": "Sacanagem",
+      "texto": "Vende os olhos do seu parceiro e faça o que quiser",
+      "peso": 0.53,
+      "tempo": 120,
+      "tags": [
+        "Sacanagem"
+      ],
+      "rodape": "Sacanagem 25"
     }
   ]
 }
